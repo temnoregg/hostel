@@ -1,0 +1,504 @@
+# Copyright (C) 2013 Hostel
+# This file is distributed under the same license as the Hostel package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hostel 0.5.9\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/hostel\n"
+"POT-Creation-Date: 2013-11-07 10:35:02+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: controllers/rooms.php:12
+msgid "Room added."
+msgstr ""
+
+#: controllers/rooms.php:22
+msgid "Room details saved."
+msgstr ""
+
+#: controllers/rooms.php:33
+msgid "Room deleted."
+msgstr ""
+
+#: controllers/shortcodes.php:8
+msgid "Online booking is not enabled."
+msgstr ""
+
+#: controllers/shortcodes.php:43
+msgid "In your selection there are dates when the room is not available. Please select only dates available for booking"
+msgstr ""
+
+#: controllers/shortcodes.php:53
+msgid "Thank you for your reservation request. We will get back to you when it is confirmed"
+msgstr ""
+
+#: models/hostel.php:69
+msgid "Hostel"
+msgstr ""
+
+#: models/hostel.php:71 views/rooms.php:1
+msgid "Manage Rooms"
+msgstr ""
+
+#: models/hostel.php:72
+msgid "Manage Bookings"
+msgstr ""
+
+#: models/hostel.php:73
+msgid "Unavailable Dates"
+msgstr ""
+
+#: models/hostel.php:74
+msgid "Help"
+msgstr ""
+
+#: models/room.php:68 views/room.php:8
+msgid "Private"
+msgstr ""
+
+#: models/room.php:69 views/room.php:9
+msgid "Dorm"
+msgstr ""
+
+#: models/room.php:73 views/room.php:13
+msgid "Ensuite"
+msgstr ""
+
+#: models/room.php:74 views/room.php:14
+msgid "Shared"
+msgstr ""
+
+#: views/booking-form.html.php:2
+msgid "Back to the listing of rooms"
+msgstr ""
+
+#: views/booking-form.html.php:7 views/booking.html.php:6
+msgid "Select room:"
+msgstr ""
+
+#: views/booking-form.html.php:12 views/booking.html.php:11
+msgid "No. beds to book:"
+msgstr ""
+
+#: views/booking-form.html.php:13 views/booking.html.php:12
+#: views/list-rooms.html.php:2
+msgid "From date:"
+msgstr ""
+
+#: views/booking-form.html.php:14 views/booking.html.php:13
+#: views/list-rooms.html.php:3
+msgid "To date:"
+msgstr ""
+
+#: views/booking-form.html.php:16 views/booking.html.php:16
+msgid "Contact name:"
+msgstr ""
+
+#: views/booking-form.html.php:17 views/booking.html.php:17
+msgid "Contact email:"
+msgstr ""
+
+#: views/booking-form.html.php:18 views/booking.html.php:18
+msgid "Contact phone:"
+msgstr ""
+
+#: views/booking-form.html.php:19
+msgid "You are:"
+msgstr ""
+
+#: views/booking-form.html.php:20 views/booking.html.php:20
+msgid "Male(s)"
+msgstr ""
+
+#: views/booking-form.html.php:21 views/booking.html.php:21
+msgid "Female(s)"
+msgstr ""
+
+#: views/booking-form.html.php:22 views/booking.html.php:22
+msgid "Couple"
+msgstr ""
+
+#: views/booking-form.html.php:23 views/booking.html.php:23
+msgid "Mixed"
+msgstr ""
+
+#: views/booking-form.html.php:27
+msgid "Make Reservation"
+msgstr ""
+
+#: views/booking-form.html.php:36
+msgid "Please enter name!"
+msgstr ""
+
+#: views/booking-form.html.php:42
+msgid "Please enter email address!"
+msgstr ""
+
+#: views/booking.html.php:2
+msgid "Add/Edit Reservation"
+msgstr ""
+
+#: views/booking.html.php:14
+msgid "Amount paid:"
+msgstr ""
+
+#: views/booking.html.php:15 views/pay-paypal.html.php:2
+msgid "Amount due:"
+msgstr ""
+
+#: views/booking.html.php:19
+msgid "Visitors type:"
+msgstr ""
+
+#: views/booking.html.php:26
+msgid "Booking status:"
+msgstr ""
+
+#: views/booking.html.php:27 views/bookings.html.php:23
+msgid "Active"
+msgstr ""
+
+#: views/booking.html.php:28
+msgid "Pending (not confirmed)"
+msgstr ""
+
+#: views/booking.html.php:29 views/bookings.html.php:25
+msgid "Cancelled"
+msgstr ""
+
+#: views/booking.html.php:34
+msgid "Save Reservation"
+msgstr ""
+
+#: views/booking.html.php:36
+msgid "Delete booking"
+msgstr ""
+
+#: views/booking.html.php:38
+msgid "Go Back"
+msgstr ""
+
+#: views/booking.html.php:48 views/bookings.html.php:43 views/rooms.php:26
+msgid "Are you sure?"
+msgstr ""
+
+#: views/bookings.html.php:2
+msgid "Manage Bookings / Reservations"
+msgstr ""
+
+#: views/bookings.html.php:4
+msgid "Showing"
+msgstr ""
+
+#: views/bookings.html.php:5
+msgid "Upcoming"
+msgstr ""
+
+#: views/bookings.html.php:6
+msgid "Past"
+msgstr ""
+
+#: views/bookings.html.php:7
+msgid "bookings"
+msgstr ""
+
+#: views/bookings.html.php:8
+msgid "Click here to manually add a new booking"
+msgstr ""
+
+#: views/bookings.html.php:11
+msgid "There are no bookings to show at the moment."
+msgstr ""
+
+#: views/bookings.html.php:15
+msgid "Room/beds"
+msgstr ""
+
+#: views/bookings.html.php:15
+msgid "Contact name"
+msgstr ""
+
+#: views/bookings.html.php:15
+msgid "Contact email"
+msgstr ""
+
+#: views/bookings.html.php:15
+msgid "Booking dates"
+msgstr ""
+
+#: views/bookings.html.php:16
+msgid "Amount paid/due"
+msgstr ""
+
+#: views/bookings.html.php:16
+msgid "Status"
+msgstr ""
+
+#: views/bookings.html.php:16 views/rooms.php:14
+msgid "Action"
+msgstr ""
+
+#: views/bookings.html.php:18
+msgid "%d beds in %s"
+msgstr ""
+
+#: views/bookings.html.php:24
+msgid "Pending"
+msgstr ""
+
+#: views/bookings.html.php:27 views/rooms.php:19
+msgid "Edit"
+msgstr ""
+
+#: views/bookings.html.php:28
+msgid "Mark as paid"
+msgstr ""
+
+#: views/bookings.html.php:33
+msgid "[previous page]"
+msgstr ""
+
+#: views/bookings.html.php:36
+msgid "[next page]"
+msgstr ""
+
+#: views/help.html.php:2
+msgid "Hostel for WordPress"
+msgstr ""
+
+#: views/help.html.php:4
+msgid "This is a plugin for managing hostels, BNB sites, and small hotel sites. You get an area where to manage your available rooms and prices, and the bookings made by visitors. Start with the main settings page to set up your booking mode, currency etc. Then once you enter your property and room details, you can use the following shortcodes:"
+msgstr ""
+
+#: views/help.html.php:7
+msgid "will display a table with your available rooms. A date selector on the top lets the user choose dates of their visit and then the rooms list is updated. If you have enabled booking in your Hostel settings page, the table will also show \"Book\" button when appropriate. The button will automaically load the booking form"
+msgstr ""
+
+#: views/help.html.php:8
+msgid "displays a generic booking form with a drop-down selector for choosing room, and a date selector. If you use the [wphostel-list] shortcode you most probably do not need this one because the booking form is automatically generated."
+msgstr ""
+
+#: views/help.html.php:11
+msgid "If you want to translate this plugin check out <a href=\"%s\" target=\"_blank\">this guide</a>. Our plugin textdomain is \"wphostel\" and you have to place your .po and .mo files in folder languages/"
+msgstr ""
+
+#: views/list-rooms.html.php:4
+msgid "Show rooms"
+msgstr ""
+
+#: views/list-rooms.html.php:8 views/room.php:7 views/rooms.php:13
+#: views/unavailable-dates.html.php:12
+msgid "Room type"
+msgstr ""
+
+#: views/list-rooms.html.php:8 views/rooms.php:14
+msgid "Bathroom"
+msgstr ""
+
+#: views/list-rooms.html.php:13
+msgid "Price per person"
+msgstr ""
+
+#: views/list-rooms.html.php:13 views/list-rooms.html.php:24
+msgid "Book"
+msgstr ""
+
+#: views/list-rooms.html.php:20
+msgid "%d beds"
+msgstr ""
+
+#: views/list-rooms.html.php:25
+msgid "Not available"
+msgstr ""
+
+#: views/options.php:2
+msgid "Hostel Options"
+msgstr ""
+
+#: views/options.php:6
+msgid "Currency:"
+msgstr ""
+
+#: views/options.php:14
+msgid "Booking mode:"
+msgstr ""
+
+#: views/options.php:15 views/options.php:20
+msgid "No booking"
+msgstr ""
+
+#: views/options.php:16 views/options.php:22
+msgid "Manual / No Payment"
+msgstr ""
+
+#: views/options.php:17 views/options.php:23
+msgid "Paypal"
+msgstr ""
+
+#: views/options.php:20
+msgid "- In this mode your site will only show the information for the rooms and will not let the visitors book rooms"
+msgstr ""
+
+#: views/options.php:22
+msgid "- In this mode your visitors will be able to request booking by clicking on button and filling their information in the booking form. You as admin will approve or reject the booking manually in the admin panel."
+msgstr ""
+
+#: views/options.php:23
+msgid "- In this mode your visitors will be able to book and get their bookings activated instantly by paying by Paypal"
+msgstr ""
+
+#: views/options.php:28
+msgid "Booking form URL:"
+msgstr ""
+
+#: views/options.php:28
+msgid "This is the URL of the post or page where you have published the <a href=\"%s\" target=\"_blank\">booking form shortcode</a>"
+msgstr ""
+
+#: views/options.php:32
+msgid "Your Paypal Email:"
+msgstr ""
+
+#: views/options.php:35
+msgid "Send me email with booking details when someone makes or requests a booking"
+msgstr ""
+
+#: views/options.php:38
+msgid "Email address to receive the notice:"
+msgstr ""
+
+#: views/options.php:39 views/options.php:48
+msgid "Email subject:"
+msgstr ""
+
+#: views/options.php:40 views/options.php:49
+msgid "Email message:"
+msgstr ""
+
+#: views/options.php:41 views/options.php:50
+msgid "You can use the following variables:"
+msgstr ""
+
+#: views/options.php:41
+msgid "(The URL to see the booking details in admin)"
+msgstr ""
+
+#: views/options.php:41 views/options.php:51
+msgid "(Date/time when reservation is made)"
+msgstr ""
+
+#: views/options.php:44
+msgid "Send confirmation email to user when booking is made"
+msgstr ""
+
+#: views/options.php:54
+msgid "Save Options"
+msgstr ""
+
+#: views/pay-paypal.html.php:1
+msgid "Booking ID:"
+msgstr ""
+
+#: views/pay-paypal.html.php:8
+msgid "Booking for %s Room / %d"
+msgstr ""
+
+#: views/room.php:1
+msgid "Create/Edit Hostel Room"
+msgstr ""
+
+#: views/room.php:5
+msgid "Room title*"
+msgstr ""
+
+#: views/room.php:6
+msgid "For management purposes"
+msgstr ""
+
+#: views/room.php:11
+msgid "Number of beds"
+msgstr ""
+
+#: views/room.php:12
+msgid "Bahtroom"
+msgstr ""
+
+#: views/room.php:16
+msgid "Price:"
+msgstr ""
+
+#: views/room.php:17
+msgid "Per person per night"
+msgstr ""
+
+#: views/room.php:18
+msgid "Room description (optional):"
+msgstr ""
+
+#: views/room.php:19
+msgid "Save room details"
+msgstr ""
+
+#: views/room.php:27
+msgid "Please enter room title. This is important so you can recognize the room when editing it and when viewing its bookings"
+msgstr ""
+
+#: views/room.php:33
+msgid "Please enter number of beds in the room. Use only numbers."
+msgstr ""
+
+#: views/room.php:39
+msgid "Please enter room price, numbers only"
+msgstr ""
+
+#: views/rooms.php:4
+msgid "Click here to add room"
+msgstr ""
+
+#: views/rooms.php:7
+msgid "You have not added any rooms yet."
+msgstr ""
+
+#: views/rooms.php:13 views/unavailable-dates.html.php:12
+msgid "Room title"
+msgstr ""
+
+#: views/rooms.php:13
+msgid "Num beds"
+msgstr ""
+
+#: views/rooms.php:14
+msgid "Price"
+msgstr ""
+
+#: views/rooms.php:19
+msgid "Delete"
+msgstr ""
+
+#: views/unavailable-dates.html.php:2
+msgid "Manage Unavailable Dates"
+msgstr ""
+
+#: views/unavailable-dates.html.php:4
+msgid "Use this page to set up dates when specific rooms can not be booked. This might be due to your scheduled maintenance, holiday, or any other date when your property will not be working, or just a specific room will not be available."
+msgstr ""
+
+#: views/unavailable-dates.html.php:6
+msgid "Note that for simplicity bookings made will not be reflected here. Making a date available does not mean there are no already made reservations for it."
+msgstr ""
+
+#: views/unavailable-dates.html.php:9
+msgid "Select date:"
+msgstr ""
+
+#: views/unavailable-dates.html.php:12
+msgid "Make unavailable"
+msgstr ""
+
+#: views/unavailable-dates.html.php:19
+msgid "Save Unavailable Rooms"
+msgstr ""
