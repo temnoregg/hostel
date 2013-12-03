@@ -29,7 +29,7 @@ class WPHostel {
 					  `room_id` INT UNSIGNED NOT NULL DEFAULT 0,
 					  `from_date` DATE NOT NULL DEFAULT '2000-01-01',
 					  `to_date` DATE NOT NULL DEFAULT '2000-01-01',
-					  `beds` TINYING UNSIGNED NOT NULL DEFAULT 1,
+					  `beds` TINYINT UNSIGNED NOT NULL DEFAULT 1,
 					  `amount_paid` DECIMAL(8,2) NOT NULL DEFAULT '0.00',
 					  `amount_due` DECIMAL(8,2) NOT NULL DEFAULT '0.00',
 					  `is_static` TINYINT UNSIGNED NOT NULL DEFAULT 0 /* When 1 means admin just disabled these dates */,

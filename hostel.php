@@ -2,9 +2,9 @@
 /*
 Plugin Name: Hostel
 Plugin URI: http://backpackercompare.com/wp-hostel/
-Description: Hostel/BnB management Plugin 
+Description: Hostel / BnB management plugin 
 Author: Kiboko Labs
-Version: 0.5.9
+Version: 0.6
 Author URI: http://calendarscripts.info/
 License: GPLv2 or later
 */

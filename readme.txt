@@ -46,9 +46,17 @@ For translating the plugin check the Help page under the Hostel menu in your adm
 
 == Installation ==
 
-1. Unzip the contents and upload the entire `namaste` directory to the `/wp-content/plugins/` directory
+= Installation =
+
+1. Unzip the contents and upload the entire `hostel` directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Go to "Hostel" in your menu and manage the plugin
+
+= Getting Started =
+
+1. Go to Hostel link in your admin menu to manage your rooms and rates
+2. Use the shortcodes to install a list of your rooms or to add the booking code to a post or page where you have described your rooms
+3. Set up unavailable dates if you have such
 
 == Frequently Asked Questions ==
 
@@ -56,6 +64,15 @@ None yet, please ask in the forum
 
 == Screenshots ==
 
+1. The options page let you set up currency, booking mode, and email settings
+
+2. You can add any number of private and dorm rooms, specify price, bathroom etc
+
+3. Add/Edit booking. As admin you can review and edit bookings made from users and manually add bookings made by phone or email
+
+4. If there are any dates when your property or some rooms are not available, add them here
+
+5. The Help page shows the available shortcodes.
 
 == Changelog ==
 
