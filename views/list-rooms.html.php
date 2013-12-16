@@ -1,7 +1,7 @@
-<form method="post">
+<form method="post" onsubmit="return validateHostelForm(this);">
 	<p><?php _e('From date:', 'wphostel')?> <?php echo WPHostelQuickDDDate('wphostel_from', $datefrom, NULL, NULL, date("Y"), date("Y") + 5);?></p>
 	<p><?php _e('To date:', 'wphostel')?> <?php echo WPHostelQuickDDDate('wphostel_to', $dateto, NULL, NULL, date("Y"), date("Y") + 5);?></p>
-	<p><input type="submit" value="<?php _e('Show rooms', 'wphostel')?>"></p>
+	<p><input type="submit" value="<?php _e('Show availability', 'wphostel')?>"></p>
 </form>
 
 <table>
@@ -26,3 +26,18 @@
 		endif;?></td><?php endif;?></tr>
 	<?php endforeach;?>
 </table>
+
+<script type="text/javascript">
+function validateHostelForm(frm) {
+	var startDate = new Date(frm.wphostel_fromyear.value, frm.wphostel_frommonth.value, frm.wphostel_fromday.value);
+	var endDate = new Date(frm.wphostel_toyear.value, frm.wphostel_tomonth.value, frm.wphostel_today.value);
+	
+	daydiff = (endDate - startDate) / (1000*60*60*24);
+	
+	if(daydiff > 5) {
+		 alert("<?php _e('Please select up to 5 days interval.', 'wphostel')?>");
+		 return false;
+	}
+	return true;
+}	
+</script>

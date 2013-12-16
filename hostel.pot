@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Hostel package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hostel 0.5.9\n"
+"Project-Id-Version: Hostel 0.6.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/hostel\n"
-"POT-Creation-Date: 2013-11-07 10:35:02+00:00\n"
+"POT-Creation-Date: 2013-12-16 11:47:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,13 +29,19 @@ msgid "Online booking is not enabled."
 msgstr ""
 
 #: controllers/shortcodes.php:43
-msgid "In your selection there are dates when the room is not available. Please select only dates available for booking"
+msgid ""
+"In your selection there are dates when the room is not available. Please "
+"select only dates available for booking"
 msgstr ""
 
 #: controllers/shortcodes.php:53
-msgid "Thank you for your reservation request. We will get back to you when it is confirmed"
+msgid ""
+"Thank you for your reservation request. We will get back to you when it is "
+"confirmed"
 msgstr ""
 
+#. #-#-#-#-#  hostel.pot (Hostel 0.6.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
 #: models/hostel.php:69
 msgid "Hostel"
 msgstr ""
@@ -56,19 +62,19 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: models/room.php:68 views/room.php:8
+#: models/room.php:69 views/room.php:8
 msgid "Private"
 msgstr ""
 
-#: models/room.php:69 views/room.php:9
+#: models/room.php:70 views/room.php:9
 msgid "Dorm"
 msgstr ""
 
-#: models/room.php:73 views/room.php:13
+#: models/room.php:76 views/room.php:13
 msgid "Ensuite"
 msgstr ""
 
-#: models/room.php:74 views/room.php:14
+#: models/room.php:77 views/room.php:14
 msgid "Shared"
 msgstr ""
 
@@ -271,23 +277,40 @@ msgid "Hostel for WordPress"
 msgstr ""
 
 #: views/help.html.php:4
-msgid "This is a plugin for managing hostels, BNB sites, and small hotel sites. You get an area where to manage your available rooms and prices, and the bookings made by visitors. Start with the main settings page to set up your booking mode, currency etc. Then once you enter your property and room details, you can use the following shortcodes:"
+msgid ""
+"This is a plugin for managing hostels, BNB sites, and small hotel sites. You "
+"get an area where to manage your available rooms and prices, and the "
+"bookings made by visitors. Start with the main settings page to set up your "
+"booking mode, currency etc. Then once you enter your property and room "
+"details, you can use the following shortcodes:"
 msgstr ""
 
 #: views/help.html.php:7
-msgid "will display a table with your available rooms. A date selector on the top lets the user choose dates of their visit and then the rooms list is updated. If you have enabled booking in your Hostel settings page, the table will also show \"Book\" button when appropriate. The button will automaically load the booking form"
+msgid ""
+"will display a table with your available rooms. A date selector on the top "
+"lets the user choose dates of their visit and then the rooms list is "
+"updated. If you have enabled booking in your Hostel settings page, the table "
+"will also show \"Book\" button when appropriate. The button will "
+"automaically load the booking form"
 msgstr ""
 
 #: views/help.html.php:8
-msgid "displays a generic booking form with a drop-down selector for choosing room, and a date selector. If you use the [wphostel-list] shortcode you most probably do not need this one because the booking form is automatically generated."
+msgid ""
+"displays a generic booking form with a drop-down selector for choosing room, "
+"and a date selector. If you use the [wphostel-list] shortcode you most "
+"probably do not need this one because the booking form is automatically "
+"generated."
 msgstr ""
 
 #: views/help.html.php:11
-msgid "If you want to translate this plugin check out <a href=\"%s\" target=\"_blank\">this guide</a>. Our plugin textdomain is \"wphostel\" and you have to place your .po and .mo files in folder languages/"
+msgid ""
+"If you want to translate this plugin check out <a href=\"%s\" target=\"_blank"
+"\">this guide</a>. Our plugin textdomain is \"wphostel\" and you have to "
+"place your .po and .mo files in folder languages/"
 msgstr ""
 
 #: views/list-rooms.html.php:4
-msgid "Show rooms"
+msgid "Show availability"
 msgstr ""
 
 #: views/list-rooms.html.php:8 views/room.php:7 views/rooms.php:13
@@ -315,6 +338,10 @@ msgstr ""
 msgid "Not available"
 msgstr ""
 
+#: views/list-rooms.html.php:38
+msgid "Please select up to 5 days interval."
+msgstr ""
+
 #: views/options.php:2
 msgid "Hostel Options"
 msgstr ""
@@ -340,15 +367,22 @@ msgid "Paypal"
 msgstr ""
 
 #: views/options.php:20
-msgid "- In this mode your site will only show the information for the rooms and will not let the visitors book rooms"
+msgid ""
+"- In this mode your site will only show the information for the rooms and "
+"will not let the visitors book rooms"
 msgstr ""
 
 #: views/options.php:22
-msgid "- In this mode your visitors will be able to request booking by clicking on button and filling their information in the booking form. You as admin will approve or reject the booking manually in the admin panel."
+msgid ""
+"- In this mode your visitors will be able to request booking by clicking on "
+"button and filling their information in the booking form. You as admin will "
+"approve or reject the booking manually in the admin panel."
 msgstr ""
 
 #: views/options.php:23
-msgid "- In this mode your visitors will be able to book and get their bookings activated instantly by paying by Paypal"
+msgid ""
+"- In this mode your visitors will be able to book and get their bookings "
+"activated instantly by paying by Paypal"
 msgstr ""
 
 #: views/options.php:28
@@ -356,7 +390,9 @@ msgid "Booking form URL:"
 msgstr ""
 
 #: views/options.php:28
-msgid "This is the URL of the post or page where you have published the <a href=\"%s\" target=\"_blank\">booking form shortcode</a>"
+msgid ""
+"This is the URL of the post or page where you have published the <a href=\"%s"
+"\" target=\"_blank\">booking form shortcode</a>"
 msgstr ""
 
 #: views/options.php:32
@@ -364,7 +400,8 @@ msgid "Your Paypal Email:"
 msgstr ""
 
 #: views/options.php:35
-msgid "Send me email with booking details when someone makes or requests a booking"
+msgid ""
+"Send me email with booking details when someone makes or requests a booking"
 msgstr ""
 
 #: views/options.php:38
@@ -444,7 +481,9 @@ msgid "Save room details"
 msgstr ""
 
 #: views/room.php:27
-msgid "Please enter room title. This is important so you can recognize the room when editing it and when viewing its bookings"
+msgid ""
+"Please enter room title. This is important so you can recognize the room "
+"when editing it and when viewing its bookings"
 msgstr ""
 
 #: views/room.php:33
@@ -484,11 +523,17 @@ msgid "Manage Unavailable Dates"
 msgstr ""
 
 #: views/unavailable-dates.html.php:4
-msgid "Use this page to set up dates when specific rooms can not be booked. This might be due to your scheduled maintenance, holiday, or any other date when your property will not be working, or just a specific room will not be available."
+msgid ""
+"Use this page to set up dates when specific rooms can not be booked. This "
+"might be due to your scheduled maintenance, holiday, or any other date when "
+"your property will not be working, or just a specific room will not be "
+"available."
 msgstr ""
 
 #: views/unavailable-dates.html.php:6
-msgid "Note that for simplicity bookings made will not be reflected here. Making a date available does not mean there are no already made reservations for it."
+msgid ""
+"Note that for simplicity bookings made will not be reflected here. Making a "
+"date available does not mean there are no already made reservations for it."
 msgstr ""
 
 #: views/unavailable-dates.html.php:9

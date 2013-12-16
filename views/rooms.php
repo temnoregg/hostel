@@ -13,8 +13,9 @@
 		<tr><th><?php _e('Room title', 'wphostel')?></th><th><?php _e('Room type', 'wphostel')?></th><th><?php _e('Num beds', 'wphostel')?></th>
 		<th><?php _e('Bathroom', 'wphostel')?></th><th><?php _e('Price', 'wphostel')?></th><th><?php _e('Action', 'wphostel')?></th></tr>
 		
-		<?php foreach($rooms as $room):?>
-			<tr><td><?php echo $room->title?></td> <td><?php echo $_room->prettify('rtype', $room->rtype);?></td>
+		<?php foreach($rooms as $room):
+		 $class = ('alternate' == @$class) ? '' : 'alternate';?>
+			<tr class="<?php echo $class?>"><td><?php echo $room->title?></td> <td><?php echo $_room->prettify('rtype', $room->rtype);?></td>
 			<td><?php echo $room->beds?></td><td><?php echo $_room->prettify('bathroom', $room->bathroom)?></td> <td><?php echo WPHOSTEL_CURRENCY.' '.$room->price?></td>
 			<td><a href="admin.php?page=wphostel_rooms&action=edit&id=<?php echo $room->id?>"><?php _e('Edit', 'wphostel')?></a> | <a href="#" onclick="wphostelDeleteRoom(<?php echo $room->id?>);return false;"><?php _e('Delete', 'wphostel')?></a></td></tr>
 		<?php endforeach;?>

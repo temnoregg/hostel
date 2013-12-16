@@ -2,7 +2,7 @@
 Contributors: prasunsen
 Tags: hostel, hotel, booking, bnb, rooms
 Requires at least: 3.3
-Tested up to: 3.7.1
+Tested up to: 3.8
 Stable tag: trunk
 License: GPL2
 
@@ -75,6 +75,11 @@ None yet, please ask in the forum
 5. The Help page shows the available shortcodes.
 
 == Changelog ==
+
+= Version 0.6.1 =
+
+- Added a validaion on the [wphostel-list] so no more than 5 days interval can be selected (to avoid creating long ugly tables with rooms). Setting soon to be made configurable.
+- Added zebra tables in manage bookings and manage rooms pages
 
 = Version 0.5.9 =
 
