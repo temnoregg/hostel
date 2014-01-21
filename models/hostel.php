@@ -120,6 +120,7 @@ class WPHostel {
 		// shortcodes
 		add_shortcode('wphostel-booking', array("WPHostelShortcodes", "booking"));
 		add_shortcode('wphostel-list', array("WPHostelShortcodes", "list_rooms"));
+		add_shortcode('wphostel-book', array("WPHostelShortcodes", "book"));
 		
 		// Paypal IPN
 		add_filter('query_vars', array(__CLASS__, "query_vars"));

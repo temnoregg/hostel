@@ -10,8 +10,8 @@
 		</select></div>
 		<div><label><?php _e('Number of beds', 'wphostel')?></label> <input type="text" name="beds" size="4" value="<?php echo @$room->beds?>"></div>
 		<div><label><?php _e('Bahtroom', 'wphostel')?></label> <select name="bathroom">
-			<option value="ensuite" <?php if(!empty($room->bathroom) and $room->rtype=='ensuite') echo 'selected'?>><?php _e('Ensuite', 'wphostel')?></option>		
-			<option value="shared" <?php if(!empty($room->bathroom) and $room->rtype=='shared') echo 'selected'?>><?php _e('Shared', 'wphostel')?></option>
+			<option value="ensuite" <?php if(!empty($room->bathroom) and $room->bathroom=='ensuite') echo 'selected'?>><?php _e('Ensuite', 'wphostel')?></option>		
+			<option value="shared" <?php if(!empty($room->bathroom) and $room->bathroom=='shared') echo 'selected'?>><?php _e('Shared', 'wphostel')?></option>
 		</select></div>
 		<div><label><?php _e('Price:', 'wphostel')?></label> <?php echo WPHOSTEL_CURRENCY?> <input type="text" name="price" size="6" value="<?php echo @$room->price?>">
 		<div class="wphostel-help"><?php _e('Per person per night', 'wphostel')?></div></div>

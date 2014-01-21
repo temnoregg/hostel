@@ -75,6 +75,9 @@ class WPHostelBooking {
 	function email($booking_id) {
 		global $wpdb;
 		
+		$headers  = 'MIME-Version: 1.0' . "\r\n";
+		$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+		
 		$email_options = get_option('wphostel_email_options');
 		
 		if(!$email_options['do_email_admin'] and !$email_options['do_email_user']) return false;
@@ -97,7 +100,7 @@ class WPHostelBooking {
 			$message = str_replace('{{contact-phone}}', $booking->contact_phone, $message);
 			$message = str_replace('{{timestamp}}', $timestamp, $message);
 			
- 			$headers = 'From: '. $email_options['admin_email'] . "\r\n";
+ 			$headers .= 'From: '. $email_options['admin_email'] . "\r\n";
  			// echo $subject.'-'.$message.'<br>';
 			wp_mail( $email_options['admin_email'], $subject, $message, $headers );
 		} // end do email admin
@@ -119,7 +122,7 @@ class WPHostelBooking {
 			$message = str_replace('{{timestamp}}', $timestamp, $message);			
 			$message = str_replace('{{num-beds}}', $booking->beds, $message);
 			
-			$headers = 'From: '. $email_options['admin_email'] . "\r\n";
+			$headers .= 'From: '. $email_options['admin_email'] . "\r\n";
 			// echo $subject.'-'.$message.'<br>';
 			wp_mail( $booking->contact_email, $subject, $message, $headers );
 		} // end do email user

@@ -127,4 +127,14 @@ class WPHostelShortcodes {
 		$content = ob_get_clean();
 		return $content;
 	} // end list_rooms();	
+	
+	// displays a Book! button
+	static function book($atts) {
+		global $post;
+		
+		$room_id = $atts[0];
+		$text = empty($atts[1]) ? __('Book', 'wphostel') : $atts[1];
+		
+		return '<input type="button" onclick="window.location='."'".wphostel_book_url($post->ID, $room_id, date("Y-m-d"), date("Y-m-d", strtotime("tomorrow")))."'".'" value="'.$text.'">';
+	}
 }
