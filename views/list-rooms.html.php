@@ -1,6 +1,6 @@
 <form method="post" onsubmit="return validateHostelForm(this);">
-	<p><?php _e('From date:', 'wphostel')?> <?php echo WPHostelQuickDDDate('wphostel_from', $datefrom, NULL, NULL, date("Y"), date("Y") + 5);?></p>
-	<p><?php _e('To date:', 'wphostel')?> <?php echo WPHostelQuickDDDate('wphostel_to', $dateto, NULL, NULL, date("Y"), date("Y") + 5);?></p>
+	<p><?php _e('From date:', 'wphostel')?> <input type="text" name="wphostel_from" value="<?php echo $datefrom?>" class="wphostelDatePicker"></p>
+	<p><?php _e('To date:', 'wphostel')?> <input type="text" name="wphostel_to" value="<?php echo $dateto?>" class="wphostelDatePicker"></p>
 	<p><input type="submit" value="<?php _e('Show availability', 'wphostel')?>"></p>
 </form>
 
@@ -39,5 +39,10 @@ function validateHostelForm(frm) {
 		 return false;
 	}
 	return true;
-}	
+}
+jQuery(document).ready(function() {
+    jQuery('.wphostelDatePicker').datepicker({
+        dateFormat : 'yy-mm-dd'
+    });
+});	
 </script>

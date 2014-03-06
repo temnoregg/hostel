@@ -10,8 +10,8 @@
 				<?php endforeach;?>
 			</select></div>
 			<div><label><?php _e('No. beds to book:', 'wphostel')?></label> <input type="text" name="beds" value="<?php echo empty($booking->beds) ? 1 : $booking->beds?>" size="4"></div>
-			<div><label><?php _e('From date:', 'wphostel')?></label> <?php echo WPHostelQuickDDDate('from', $from_date, NULL, NULL, date("Y"), date("Y") + 10);?></div>
-			<div><label><?php _e('To date:', 'wphostel')?></label> <?php echo WPHostelQuickDDDate('to', $to_date, NULL, NULL, date("Y"), date("Y") + 10);?></div>
+			<div><label><?php _e('From date:', 'wphostel')?></label> <input type="text" size="10" name="from_date" value="<?php echo $from_date?>" class="wphostelDatePicker"></div>
+			<div><label><?php _e('To date:', 'wphostel')?></label> <input type="text" size="10" name="to_date" value="<?php echo $to_date?>" class="wphostelDatePicker"></div>
 			
 			<div><label><?php _e('Contact name:', 'wphostel')?></label> <input type="text" name="contact_name" value="<?php echo empty($booking->contact_name) ? '' : $booking->contact_name?>"></div>
 			<div><label><?php _e('Contact email:', 'wphostel')?></label> <input type="text" name="contact_email" value="<?php echo empty($booking->contact_email) ? '' : $booking->contact_email?>"></div>
@@ -46,4 +46,10 @@ function WPHostelValidateBooking(frm) {
 	
 	return true;
 }
+
+jQuery(document).ready(function() {
+    jQuery('.wphostelDatePicker').datepicker({
+        dateFormat : 'yy-mm-dd'
+    });
+});	
 </script>

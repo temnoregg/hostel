@@ -12,8 +12,8 @@ class WPHostelShortcodes {
 			$_booking = new WPHostelBooking();
 			$_room = new WPHostelRoom();
 			
-			$from_date = $_POST['fromyear'].'-'.$_POST['frommonth'].'-'.$_POST['fromday'];
-			$to_date = $_POST['toyear'].'-'.$_POST['tomonth'].'-'.$_POST['today'];
+			$from_date = $_POST['from_date'];
+			$to_date = $_POST['to_date'];
 			
 			// make sure it's not a duplicate
 			$bid = $wpdb->get_var($wpdb->prepare("SELECT id FROM ".WPHOSTEL_BOOKINGS."
@@ -65,6 +65,8 @@ class WPHostelShortcodes {
 			$rooms = $wpdb->get_results( "SELECT * FROM ".WPHOSTEL_ROOMS." ORDER BY title" );
 			
 			// display the booking form
+			wp_enqueue_script('jquery-ui-datepicker');
+		  wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 			include(WPHOSTEL_PATH."/views/booking-form.html.php");
 		}
 		
@@ -86,8 +88,8 @@ class WPHostelShortcodes {
 		} 
 		
 		// the dropdown defaults to "from tomorrow to 1 day after"
-		$datefrom = empty($_POST['wphostel_fromday']) ? date("Y-m-d", strtotime("tomorrow")) : $_POST['wphostel_fromyear'].'-'.$_POST['wphostel_frommonth'].'-'.$_POST['wphostel_fromday'];
-		$dateto = empty($_POST['wphostel_today']) ? date("Y-m-d", strtotime("+ 2 days")) : $_POST['wphostel_toyear'].'-'.$_POST['wphostel_tomonth'].'-'.$_POST['wphostel_today'];
+		$datefrom = empty($_POST['wphostel_from']) ? date("Y-m-d", strtotime("tomorrow")) : $_POST['wphostel_from'];
+		$dateto = empty($_POST['wphostel_to']) ? date("Y-m-d", strtotime("+ 2 days")) : $_POST['wphostel_to'];
 		
 		// select all rooms
 		$rooms = $wpdb->get_results("SELECT * FROM ".WPHOSTEL_ROOMS." ORDER BY price", ARRAY_A);
@@ -122,6 +124,9 @@ class WPHostelShortcodes {
 				} // end foreach booking
 			} // end for i			
 		} // end foreach room
+		
+		wp_enqueue_script('jquery-ui-datepicker');
+		wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 		
 		include(WPHOSTEL_PATH."/views/list-rooms.html.php");
 		$content = ob_get_clean();

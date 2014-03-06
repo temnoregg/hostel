@@ -10,8 +10,9 @@
 		
 		<table class="widefat">
 			<tr><th><?php _e('Room title', 'wphostel')?></th><th><?php _e('Room type', 'wphostel')?></th><th><?php _e('Make unavailable', 'wphostel')?></th>
-			<?php foreach($rooms as $room):?>
-				<tr><td><?php echo $room->title?></td><td><?php echo $_room->prettify('rtype', $room->rtype);?></td>
+			<?php foreach($rooms as $room):
+				$class = ('alternate' == @$class) ? '' : 'alternate';?>
+				<tr class="<?php echo $class?>"><td><?php echo $room->title?></td><td><?php echo $_room->prettify('rtype', $room->rtype);?></td>
 				<td align="center"><input type="checkbox" name="ids[]" value="<?php echo $room->id?>" <?php if(in_array($room->id, $unavailable_room_ids)) echo 'checked'?>></td></tr>
 			<?php endforeach;?>
 		</table>

@@ -4,8 +4,8 @@ class WPHostelBooking {
 		global $wpdb;
 		
 		// prepare from/to date
-		$fromdate = $vars['fromyear'].'-'.$vars['frommonth'].'-'.$vars['fromday'];
-		$todate = $vars['toyear'].'-'.$vars['tomonth'].'-'.$vars['today'];
+		$fromdate = empty($vars['from_date']) ? $vars['fromyear'].'-'.$vars['frommonth'].'-'.$vars['fromday'] : $vars['from_date'];
+		$todate = empty($vars['to_date']) ? $vars['toyear'].'-'.$vars['tomonth'].'-'.$vars['today'] : $vars['to_date'];
 		
 		$result = $wpdb->query($wpdb->prepare("INSERT INTO ".WPHOSTEL_BOOKINGS." SET
 		 room_id=%d, from_date=%s, to_date=%s, amount_paid=%s, amount_due=%s,
@@ -53,7 +53,7 @@ class WPHostelBooking {
 		global $wpdb;
 		
 		$result = $wpdb->query($wpdb->prepare("UPDATE ".WPHOSTEL_BOOKINGS." SET
-			amount_paid=amount_paid + amount_due, amount_due=0
+			amount_paid=amount_paid + amount_due, amount_due=0, status='active'
 			WHERE id=%d", $id));
 			
 		if($result === false) return false;

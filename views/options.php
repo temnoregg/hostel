@@ -55,6 +55,8 @@
 			<input type="hidden" name="ok" value="1">
 		</div>
 	</form>
+	
+		<p><?php printf(__('Your feedback is most welcome! Please <a href="%s" target="_blank">let us know</a> what features and improvements you would like to see in the plugin.', 'wphostel'), 'http://wordpress.org/support/plugin/hostel')?></p>
 </div>	
 
 <script type="text/javascript" >

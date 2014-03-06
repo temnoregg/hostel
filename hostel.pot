@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Hostel package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hostel 0.6.3\n"
+"Project-Id-Version: Hostel 0.6.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/hostel\n"
-"POT-Creation-Date: 2014-01-21 10:48:59+00:00\n"
+"POT-Creation-Date: 2014-03-06 11:07:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,12 +40,12 @@ msgid ""
 "confirmed"
 msgstr ""
 
-#: controllers/shortcodes.php:136 views/list-rooms.html.php:13
+#: controllers/shortcodes.php:141 views/list-rooms.html.php:13
 #: views/list-rooms.html.php:24
 msgid "Book"
 msgstr ""
 
-#. #-#-#-#-#  hostel.pot (Hostel 0.6.3)  #-#-#-#-#
+#. #-#-#-#-#  hostel.pot (Hostel 0.6.5)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: models/hostel.php:69
 msgid "Hostel"
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Go Back"
 msgstr ""
 
-#: views/booking.html.php:48 views/bookings.html.php:44 views/rooms.php:30
+#: views/booking.html.php:48 views/bookings.html.php:46 views/rooms.php:30
 msgid "Are you sure?"
 msgstr ""
 
@@ -265,15 +265,15 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: views/bookings.html.php:29
+#: views/bookings.html.php:30
 msgid "Mark as paid"
 msgstr ""
 
-#: views/bookings.html.php:34
+#: views/bookings.html.php:36
 msgid "[previous page]"
 msgstr ""
 
-#: views/bookings.html.php:37
+#: views/bookings.html.php:39
 msgid "[next page]"
 msgstr ""
 
@@ -437,6 +437,13 @@ msgstr ""
 msgid "Save Options"
 msgstr ""
 
+#: views/options.php:59
+msgid ""
+"Your feedback is most welcome! Please <a href=\"%s\" target=\"_blank\">let "
+"us know</a> what features and improvements you would like to see in the "
+"plugin."
+msgstr ""
+
 #: views/pay-paypal.html.php:1
 msgid "Booking ID:"
 msgstr ""
@@ -557,6 +564,6 @@ msgstr ""
 msgid "Make unavailable"
 msgstr ""
 
-#: views/unavailable-dates.html.php:19
+#: views/unavailable-dates.html.php:20
 msgid "Save Unavailable Rooms"
 msgstr ""

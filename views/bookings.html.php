@@ -25,8 +25,10 @@
 			case 'pending': _e('Pending', 'wphostel'); break;
 			case 'cancelled': _e('Cancelled', 'wphostel'); break;
 			endswitch;?></td>
-			<td><input type="button" value="<?php _e('Edit', 'wphostel')?>" onclick="window.location='admin.php?page=wphostel_bookings&do=edit&id=<?php echo $booking->id?>&type=<?php echo $type?>&offset=<?php echo $offset?>';">
-			<input type="button" value="<?php _e('Mark as paid', 'wphostel');?>" onclick="wpHostelMarkPaid(<?php echo $booking->id?>);"></td></tr>
+			<td nowrap="true"><input type="button" value="<?php _e('Edit', 'wphostel')?>" onclick="window.location='admin.php?page=wphostel_bookings&do=edit&id=<?php echo $booking->id?>&type=<?php echo $type?>&offset=<?php echo $offset?>';">
+			<?php if($booking->amount_due > 0 or $booking->status != 'active'):?>
+			<input type="button" value="<?php _e('Mark as paid', 'wphostel');?>" onclick="wpHostelMarkPaid(<?php echo $booking->id?>);">
+			<?php endif;?></td></tr>
 		<?php endforeach;?>
 	</table>
 	
