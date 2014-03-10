@@ -29,8 +29,10 @@
 
 <script type="text/javascript">
 function validateHostelForm(frm) {
-	var startDate = new Date(frm.wphostel_fromyear.value, frm.wphostel_frommonth.value, frm.wphostel_fromday.value);
-	var endDate = new Date(frm.wphostel_toyear.value, frm.wphostel_tomonth.value, frm.wphostel_today.value);
+	startParts = frm.wphostel_from.value.split('-');
+	var startDate = new Date(startParts[0], startParts[1], startParts[2]);
+	endParts = frm.wphostel_to.value.split('-');
+	var endDate = new Date(endParts[0], endParts[1], endParts[2]);
 	
 	daydiff = (endDate - startDate) / (1000*60*60*24);
 	
