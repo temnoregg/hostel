@@ -36,8 +36,8 @@ class WPHostelShortcodes {
 			if(empty($bid)) {
 				// make sure all dates are available
 				$exists = $wpdb->get_var( $wpdb->prepare("SELECT id FROM ".WPHOSTEL_BOOKINGS." 
-				WHERE room_id=%d AND ((from_date>=%s AND from_date<= %s) OR (to_date>=%s AND to_date<=%s)
-				OR (from_date <= %s AND to_date >=%s))", 
+				WHERE room_id=%d AND ((from_date>=%s AND from_date<= %s) OR (to_date > %s AND to_date <= %s)
+				OR (from_date <= %s AND to_date > %s))", 
 				$_POST['room_id'], $from_date, $to_date, $from_date, $to_date, $from_date, $to_date));				
 							
 				if(!empty($exists)) return __('In your selection there are dates when the room is not available. Please select only dates available for booking','wphostel');
@@ -57,7 +57,7 @@ class WPHostelShortcodes {
 			}
 		}
 		else {		
-			// when cooming from the list of rooms we have dates in GET
+			// when coming from the list of rooms we have dates in GET
 			$from_date = empty($_GET['from_date']) ? date("Y-m-d", strtotime("tomorrow")) : $_GET['from_date'];
 			$to_date = empty($_GET['to_date']) ? date("Y-m-d", strtotime("+2 days")) : $_GET['to_date'];			
 			
@@ -96,7 +96,7 @@ class WPHostelShortcodes {
 		
 		// select all bookings in the given period
 		$bookings = $wpdb->get_results($wpdb->prepare("SELECT * FROM ".WPHOSTEL_BOOKINGS." WHERE (from_date >= %s AND from_date <= %s) 
-			OR (to_date >=%s AND to_date <= %s) OR (from_date <= %s AND to_date >=%s) ", $datefrom, $dateto, $datefrom, $dateto, $datefrom, $dateto));
+			OR (to_date > %s AND to_date <= %s) OR (from_date <= %s AND to_date > %s) ", $datefrom, $dateto, $datefrom, $dateto, $datefrom, $dateto));
 		
 		// get the number of days between the two dates
 		$datefrom_time = strtotime($datefrom);
@@ -114,7 +114,7 @@ class WPHostelShortcodes {
 				foreach($bookings as $booking) {
 					if($booking->room_id == $room['id']) {
 						$booking_from_time = strtotime($booking->from_date);
-						$booking_to_time = strtotime($booking->to_date);
+						$booking_to_time = strtotime($booking->to_date) - 24*3600;
 						
 						if($booking_from_time <= $curday_time and $booking_to_time>=$curday_time) {
 							$rooms[$cnt][$i]['available_beds'] -= $booking->beds;
