@@ -95,6 +95,7 @@ class WPHostelBookings {
 		$_room = new WPHostelRoom();
 		
 		$date = empty($_POST['dateyear']) ? date("Y-m-d") : $_POST['dateyear'].'-'.$_POST['datemonth'].'-'.$_POST['dateday'];
+		$to_date = date("Y-m-d", strtotime($date) + 24*3600);
 		
 		// select all available rooms
 		$rooms = $wpdb->get_results( "SELECT * FROM ".WPHOSTEL_ROOMS." ORDER BY title" );
@@ -105,23 +106,23 @@ class WPHostelBookings {
 				if(in_array($room->id, $unavailable_room_ids)) {
 					// make sure there is a static booking for the room on this date
 					$exists = $wpdb->get_var($wpdb->prepare("SELECT id FROM ".WPHOSTEL_BOOKINGS." 
-						WHERE room_id=%d AND from_date=%s AND to_date=%s AND is_static=1", $room->id, $date, $date));
+						WHERE room_id=%d AND from_date=%s AND to_date=%s AND is_static=1", $room->id, $date, $to_date));
 					if(!$exists) {
 						$wpdb->query($wpdb->prepare("INSERT INTO ".WPHOSTEL_BOOKINGS." SET
-							room_id=%d, from_date=%s, to_date=%s, is_static=1", $room->id, $date, $date));
+							room_id=%d, from_date=%s, to_date=%s, is_static=1", $room->id, $date, $to_date));
 					}	
 				}
 				else {
 					// delete any static bookings for this room on this date
 					$wpdb->query($wpdb->prepare("DELETE FROM ".WPHOSTEL_BOOKINGS." 
-						WHERE is_static=1 AND from_date=%s AND to_date=%s AND room_id=%d", $date, $date, $room->id));
+						WHERE is_static=1 AND from_date=%s AND to_date=%s AND room_id=%d", $date, $to_date, $room->id));
 				}
 			}
 		}
 			
 		// now select all static bookings on the given date and feel new $unavailable_room_ids array
 		$static_bookings = $wpdb->get_results($wpdb->prepare("SELECT * FROM ".WPHOSTEL_BOOKINGS." 
-			WHERE is_static=1 AND from_date=%s AND to_date=%s", $date, $date));
+			WHERE is_static=1 AND from_date=%s AND to_date=%s", $date, $to_date));
 		$unavailable_room_ids = array();
 		foreach($static_bookings as $booking) $unavailable_room_ids[] = $booking->room_id;
 		

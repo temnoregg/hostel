@@ -118,6 +118,7 @@ class WPHostelShortcodes {
 						
 						if($booking_from_time <= $curday_time and $booking_to_time>=$curday_time) {
 							$rooms[$cnt][$i]['available_beds'] -= $booking->beds;
+							if($booking->is_static) $rooms[$cnt][$i]['available_beds'] = 0;
 							if($rooms[$cnt][$i]['available_beds'] <= 0) break;
 						}
 					} // end if this booking is for this room

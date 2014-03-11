@@ -76,7 +76,7 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.6.7 =
+= Version 0.6.8 =
 
 - Added "wphostel-book" shortcode which allows you to place a booking button on any page (usually on a page where you have described your room manually, with pictures etc)
 - Added a validaion on the [wphostel-list] so no more than 5 days interval can be selected (to avoid creating long ugly tables with rooms). Setting soon to be made configurable.
@@ -87,6 +87,7 @@ None yet, please ask in the forum
 - Fixed bug with pending status when manually marking booking as paid
 - Fixed JS validation error on the [wphostel-list] shortcode
 - Fixed problem with overlapping the "to" day when booking and showing availability
+- Fixed issues with unavailable dates: when date is unavailable, all beds should be considered unavailable
 
 = Version 0.5.9 =
 
