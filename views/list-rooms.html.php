@@ -16,8 +16,8 @@
 		$can_book = true; ?>
 		<tr><td><?php echo $_room->prettify('rtype', $room['rtype'])?></td><td><?php echo $_room->prettify('bathroom', $room['bathroom'])?></td>
 		<?php for($i=0; $i < $numdays; $i++):
-			if(!$room[$i]['available_beds']) $can_book = false;?>
-			<td><?php echo $room[$i]['available_beds'] ? sprintf(__('%d beds', 'wphostel'), $room[$i]['available_beds'])	 : "X"?></td>
+			if(!$room['days'][$i]['available_beds']) $can_book = false;?>
+			<td><?php echo $room['days'][$i]['available_beds'] ? sprintf(__('%d beds', 'wphostel'), $room['days'][$i]['available_beds'])	 : "X"?></td>
 		<?php endfor;?>	
 		<td><?php echo WPHOSTEL_CURRENCY.' '.$room['price']?></td>
 		<?php if($booking_mode != 'none'):?><td align="center"><?php if($can_book):?>

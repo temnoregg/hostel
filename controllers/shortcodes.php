@@ -21,7 +21,8 @@ class WPHostelShortcodes {
 				$_POST['room_id'], $from_date, $to_date, $_POST['contact_email']));
 				
 			// select the room
-			$room = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WPHOSTEL_ROOMS." WHERE id=%d", $_POST['room_id']));		
+			$room = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WPHOSTEL_ROOMS." WHERE id=%d", $_POST['room_id']));	
+			$check_room = (array)$room;	
 				
 			// calculate cost
 			$datefrom_time = strtotime($from_date);
@@ -34,13 +35,19 @@ class WPHostelShortcodes {
 			$_POST['status'] = 'pending';
 										
 			if(empty($bid)) {
+				// if this is a private room, we cannot book less beds than the room has
+				if($room->rtype == 'private' and $_POST['beds'] != $room->beds) {
+					return sprintf(__('This is a private room. You have to book all the %d beds', 'wphostel'), $room->beds);
+				}				
+				
+				// select all bookings in the given period
+				$bookings = $_booking->select_in_period($from_date, $to_date);
+								
 				// make sure all dates are available
-				$exists = $wpdb->get_var( $wpdb->prepare("SELECT id FROM ".WPHOSTEL_BOOKINGS." 
-				WHERE room_id=%d AND ((from_date>=%s AND from_date<= %s) OR (to_date > %s AND to_date <= %s)
-				OR (from_date <= %s AND to_date > %s))", 
-				$_POST['room_id'], $from_date, $to_date, $from_date, $to_date, $from_date, $to_date));				
-							
-				if(!empty($exists)) return __('In your selection there are dates when the room is not available. Please select only dates available for booking','wphostel');
+				$check_room = $_room->availability($check_room, $bookings, $from_date, $to_date, $numdays, $datefrom_time, $dateto_time);
+				foreach($check_room['days']	as $day) {
+					if(!$day['available_beds']) return __('In your selection there are dates when the room is not available. Please select only dates available for booking','wphostel');
+				}		
 						
 				$bid = $_booking->add($_POST);
 			}
@@ -79,6 +86,7 @@ class WPHostelShortcodes {
 	static function list_rooms() {
 		global $wpdb, $post;
 		$_room = new WPHostelRoom();
+		$_booking = new WPHostelBooking();
 		$dateformat = get_option('date_format');
 		$booking_mode = get_option('wphostel_booking_mode');
 		
@@ -95,35 +103,15 @@ class WPHostelShortcodes {
 		$rooms = $wpdb->get_results("SELECT * FROM ".WPHOSTEL_ROOMS." ORDER BY price", ARRAY_A);
 		
 		// select all bookings in the given period
-		$bookings = $wpdb->get_results($wpdb->prepare("SELECT * FROM ".WPHOSTEL_BOOKINGS." WHERE (from_date >= %s AND from_date <= %s) 
-			OR (to_date > %s AND to_date <= %s) OR (from_date <= %s AND to_date > %s) ", $datefrom, $dateto, $datefrom, $dateto, $datefrom, $dateto));
+		$bookings = $_booking->select_in_period($datefrom, $dateto);
 		
-		// get the number of days between the two dates
 		$datefrom_time = strtotime($datefrom);
-		$dateto_time = strtotime($dateto);
-		
-		$numdays = ($dateto_time   -  $datefrom_time) / (24 * 3600);	
+		$dateto_time = strtotime($dateto);		
+		$numdays = ($dateto_time   -  $datefrom_time) / (24 * 3600);
 		
 		// match bookings to rooms so for each date we know if the room is booked or not
 		foreach($rooms as $cnt=>$room) {
-			for($i=0; $i < $numdays; $i++) {
-				// lets store number of available beds. When they reach 0 the whole room is not available
-				$rooms[$cnt][$i]['available_beds'] = $room['beds'];
-				// current day timestamp				
-				$curday_time = $datefrom_time + $i*24*3600;
-				foreach($bookings as $booking) {
-					if($booking->room_id == $room['id']) {
-						$booking_from_time = strtotime($booking->from_date);
-						$booking_to_time = strtotime($booking->to_date) - 24*3600;
-						
-						if($booking_from_time <= $curday_time and $booking_to_time>=$curday_time) {
-							$rooms[$cnt][$i]['available_beds'] -= $booking->beds;
-							if($booking->is_static) $rooms[$cnt][$i]['available_beds'] = 0;
-							if($rooms[$cnt][$i]['available_beds'] <= 0) break;
-						}
-					} // end if this booking is for this room
-				} // end foreach booking
-			} // end for i			
+			$rooms[$cnt] = $_room->availability($room, $bookings, $datefrom, $dateto, $numdays, $datefrom_time, $dateto_time);			
 		} // end foreach room
 		
 		wp_enqueue_script('jquery-ui-datepicker');

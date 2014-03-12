@@ -79,4 +79,30 @@ class WPHostelRoom {
 			break;
 		}
 	}
+
+	// figure out availability of a room in given period
+	// room has to be array, not object
+	function availability($room, $bookings, $datefrom, $dateto, $numdays, $datefrom_time, $dateto_time) {
+		for($i=0; $i < $numdays; $i++) {
+				// lets store number of available beds. When they reach 0 the whole room is not available
+				$room['days'][$i]['available_beds'] = $room['beds'];
+				// current day timestamp				
+				$curday_time = $datefrom_time + $i*24*3600;
+				foreach($bookings as $booking) {
+					if($booking->room_id == $room['id']) {
+						$booking_from_time = strtotime($booking->from_date);
+						$booking_to_time = strtotime($booking->to_date) - 24*3600;
+						
+						if($booking_from_time <= $curday_time and $booking_to_time>=$curday_time) {
+							$room['days'][$i]['available_beds'] -= $booking->beds;
+							if($room['days'][$i]['available_beds'] < 0) $room['days'][$i]['available_beds'] = 0; 
+							if($booking->is_static or $room['rtype'] == 'private') $room['days'][$i]['available_beds'] = 0;
+							if($room['days'][$i]['available_beds'] <= 0) break;
+						}
+					} // end if this booking is for this room
+				} // end foreach booking
+			} // end for i		
+			
+			return $room;
+	} // end availability
 }

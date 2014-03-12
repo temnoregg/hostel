@@ -127,4 +127,14 @@ class WPHostelBooking {
 			wp_mail( $booking->contact_email, $subject, $message, $headers );
 		} // end do email user
 	} // end email
+	
+	// select all bookings for a given period - used to check for availability
+	function select_in_period($datefrom, $dateto) {
+		global $wpdb;
+		
+		$bookings = $wpdb->get_results($wpdb->prepare("SELECT * FROM ".WPHOSTEL_BOOKINGS." WHERE (from_date >= %s AND from_date <= %s) 
+			OR (to_date > %s AND to_date <= %s) OR (from_date <= %s AND to_date > %s) ", $datefrom, $dateto, $datefrom, $dateto, $datefrom, $dateto));
+			
+			return $bookings;
+	}
 }

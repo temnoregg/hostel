@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Hostel package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hostel 0.6.5\n"
+"Project-Id-Version: Hostel 0.7\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/hostel\n"
-"POT-Creation-Date: 2014-03-06 11:07:19+00:00\n"
+"POT-Creation-Date: 2014-03-12 10:40:58+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,24 +28,28 @@ msgstr ""
 msgid "Online booking is not enabled."
 msgstr ""
 
-#: controllers/shortcodes.php:43
+#: controllers/shortcodes.php:40
+msgid "This is a private room. You have to book all the %d beds"
+msgstr ""
+
+#: controllers/shortcodes.php:49
 msgid ""
 "In your selection there are dates when the room is not available. Please "
 "select only dates available for booking"
 msgstr ""
 
-#: controllers/shortcodes.php:53
+#: controllers/shortcodes.php:60
 msgid ""
 "Thank you for your reservation request. We will get back to you when it is "
 "confirmed"
 msgstr ""
 
-#: controllers/shortcodes.php:141 views/list-rooms.html.php:13
+#: controllers/shortcodes.php:130 views/list-rooms.html.php:13
 #: views/list-rooms.html.php:24
 msgid "Book"
 msgstr ""
 
-#. #-#-#-#-#  hostel.pot (Hostel 0.6.5)  #-#-#-#-#
+#. #-#-#-#-#  hostel.pot (Hostel 0.7)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: models/hostel.php:69
 msgid "Hostel"
@@ -339,7 +343,7 @@ msgstr ""
 msgid "Not available"
 msgstr ""
 
-#: views/list-rooms.html.php:38
+#: views/list-rooms.html.php:40
 msgid "Please select up to 5 days interval."
 msgstr ""
 
@@ -566,4 +570,8 @@ msgstr ""
 
 #: views/unavailable-dates.html.php:20
 msgid "Save Unavailable Rooms"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://backpackercompare.com/wp-hostel/"
 msgstr ""

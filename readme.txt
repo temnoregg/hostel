@@ -76,12 +76,13 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.6.8 =
+= Version 0.7 =
 
 - Added "wphostel-book" shortcode which allows you to place a booking button on any page (usually on a page where you have described your room manually, with pictures etc)
 - Added a validaion on the [wphostel-list] so no more than 5 days interval can be selected (to avoid creating long ugly tables with rooms). Setting soon to be made configurable.
 - Added zebra tables in manage bookings and manage rooms pages
 - Changed the date drop-downs on the front end to use the date picker
+- Major improvements of the availability logics, differentiating between dorms and private rooms
 - Fixed bug with resetting the room type on editing
 - Fixed HTML content-type of the auto-mails
 - Fixed bug with pending status when manually marking booking as paid
