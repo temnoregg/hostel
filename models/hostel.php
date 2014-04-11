@@ -1,11 +1,11 @@
 <?php
 // main model containing general config and UI functions
 class WPHostel {
-   static function install() {
+   static function install($init = true) {
    	global $wpdb;	
    	$wpdb -> show_errors();
    	
-   	self::init();
+   	if($init) self::init();
 	  
 	   // rooms
    	if($wpdb->get_var("SHOW TABLES LIKE '".WPHOSTEL_ROOMS."'") != WPHOSTEL_ROOMS) {        
@@ -61,7 +61,13 @@ class WPHostel {
 		  
 		// if there's no currency, default it to USD
 		$currency = get_option('wphostel_currency');
-		if(empty($currency)) update_option('wphostel_currency', 'USD');  	  
+		if(empty($currency)) update_option('wphostel_currency', 'USD');
+		
+		// add new fields
+		wphostel_add_db_fields(array(
+			array("name" => 'price_type', "type" => "VARCHAR(100) NOT NULL DEFAULT 'per-bed'"),
+		 ),
+		 WPHOSTEL_ROOMS);  	  
    }
    
    // main menu
@@ -125,6 +131,10 @@ class WPHostel {
 		// Paypal IPN
 		add_filter('query_vars', array(__CLASS__, "query_vars"));
 		add_action('parse_request', array("WPHostelPayment", "parse_request"));
+		
+		$old_version = get_option('wphostel_version');
+		if(empty($old_version) or $old_version < 0.72) self :: install(false);
+		update_option('wphostel_version', '0.72');
 	}
 	
 	// handle Hostel vars in the request

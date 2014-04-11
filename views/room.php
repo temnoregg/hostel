@@ -13,8 +13,10 @@
 			<option value="ensuite" <?php if(!empty($room->bathroom) and $room->bathroom=='ensuite') echo 'selected'?>><?php _e('Ensuite', 'wphostel')?></option>		
 			<option value="shared" <?php if(!empty($room->bathroom) and $room->bathroom=='shared') echo 'selected'?>><?php _e('Shared', 'wphostel')?></option>
 		</select></div>
-		<div><label><?php _e('Price:', 'wphostel')?></label> <?php echo WPHOSTEL_CURRENCY?> <input type="text" name="price" size="6" value="<?php echo @$room->price?>">
-		<div class="wphostel-help"><?php _e('Per person per night', 'wphostel')?></div></div>
+			<div><label><?php _e('Price:', 'wphostel')?></label> <?php echo WPHOSTEL_CURRENCY?> <input type="text" name="price" size="6" value="<?php echo @$room->price?>"> &nbsp;
+			<input type="radio" name="price_type" value="per-bed" <?php if(empty($room->price_type) or $room->price_type == 'per-bed') echo 'checked'?>> <?php _e('Per person per night', 'wphostel')?>
+			<input type="radio" name="price_type" value="per-room" <?php if(!empty($room->price_type) and $room->price_type == 'per-room') echo 'checked'?>> <?php _e('Per night for the whole room', 'wphostel')?>
+		</div>
 		<div><label><?php _e('Room description (optional):', 'wphostel')?></label> <?php wp_editor(@$room->description, 'description')?></div>
 		<div><input type="submit" value="<?php _e('Save room details', 'wphostel')?>"></div>
 		<input type="hidden" name="ok" value="1">

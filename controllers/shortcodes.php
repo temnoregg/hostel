@@ -23,6 +23,8 @@ class WPHostelShortcodes {
 			// select the room
 			$room = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WPHOSTEL_ROOMS." WHERE id=%d", $_POST['room_id']));	
 			$check_room = (array)$room;	
+			
+			if($room->price_type == 'per-room') $_POST['beds'] = 1;
 				
 			// calculate cost
 			$datefrom_time = strtotime($from_date);
@@ -36,7 +38,7 @@ class WPHostelShortcodes {
 										
 			if(empty($bid)) {
 				// if this is a private room, we cannot book less beds than the room has
-				if($room->rtype == 'private' and $_POST['beds'] != $room->beds) {
+				if($room->rtype == 'private' and $_POST['beds'] != $room->beds and $room->price_type != 'per-room') {
 					return sprintf(__('This is a private room. You have to book all the %d beds', 'wphostel'), $room->beds);
 				}				
 				

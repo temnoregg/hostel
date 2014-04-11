@@ -4,8 +4,9 @@ class WPHostelRoom {
 		global $wpdb;
 		
 		$result = $wpdb->query($wpdb->prepare("INSERT INTO ".WPHOSTEL_ROOMS." SET
-			title=%s, rtype=%s, beds=%d, bathroom=%s, price=%s, description=%s", 
-			$vars['title'], $vars['rtype'], $vars['beds'], $vars['bathroom'], $vars['price'], $vars['description']));
+			title=%s, rtype=%s, beds=%d, bathroom=%s, price=%s, description=%s, price_type=%s", 
+			$vars['title'], $vars['rtype'], $vars['beds'], $vars['bathroom'], $vars['price'], 
+			$vars['description'], $vars['price_type']));
 			
 		if($result===false) return false;
 		return true;	
@@ -15,8 +16,10 @@ class WPHostelRoom {
 		global $wpdb;
 		
 		$result = $wpdb->query($wpdb->prepare("UPDATE ".WPHOSTEL_ROOMS." SET
-			title=%s, rtype=%s, beds=%d, bathroom=%s, price=%s, description=%s WHERE id=%d", 
-			$vars['title'], $vars['rtype'], $vars['beds'], $vars['bathroom'], $vars['price'], $vars['description'], $id));
+			title=%s, rtype=%s, beds=%d, bathroom=%s, price=%s, description=%s, price_type=%s 
+			WHERE id=%d", 
+			$vars['title'], $vars['rtype'], $vars['beds'], $vars['bathroom'], $vars['price'], 
+			$vars['description'], $vars['price_type'], $id));
 			
 		if($result===false) return false;
 		return true;	
@@ -75,6 +78,13 @@ class WPHostelRoom {
 				switch($value) {
 					case 'ensuite': return __('Ensuite', 'wphostel'); break;
 					case 'shared': return __('Shared', 'wphostel'); break;
+				}
+			break;
+			
+			case 'price_type':
+				switch($value) {
+					case 'per-bed': return __('Per person per night', 'wphostel'); break;
+					case 'per-room': return __('Per night for the whole room', 'wphostel'); break;
 				}
 			break;
 		}

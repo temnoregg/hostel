@@ -19,7 +19,7 @@
 			if(!$room['days'][$i]['available_beds']) $can_book = false;?>
 			<td><?php echo $room['days'][$i]['available_beds'] ? sprintf(__('%d beds', 'wphostel'), $room['days'][$i]['available_beds'])	 : "X"?></td>
 		<?php endfor;?>	
-		<td><?php echo WPHOSTEL_CURRENCY.' '.$room['price']?></td>
+		<td><?php echo WPHOSTEL_CURRENCY.' '.$room['price'].' <br>('.$_room->prettify('price_type', $room['price_type']).')';?></td>
 		<?php if($booking_mode != 'none'):?><td align="center"><?php if($can_book):?>
 			<input type="button" value="<?php _e('Book', 'wphostel');?>" onclick="window.location='<?php echo wphostel_book_url($post->ID, $room['id'], $datefrom, $dateto)?>'">
 		<?php else: _e('Not available', 'wphostel');

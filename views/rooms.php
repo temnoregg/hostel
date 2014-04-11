@@ -16,7 +16,8 @@
 		<?php foreach($rooms as $room):
 		 $class = ('alternate' == @$class) ? '' : 'alternate';?>
 			<tr class="<?php echo $class?>"><td><?php echo $room->title?></td> <td><?php echo $_room->prettify('rtype', $room->rtype);?></td>
-			<td><?php echo $room->beds?></td><td><?php echo $_room->prettify('bathroom', $room->bathroom)?></td> <td><?php echo WPHOSTEL_CURRENCY.' '.$room->price?></td>
+			<td><?php echo $room->beds?></td><td><?php echo $_room->prettify('bathroom', $room->bathroom)?></td> <td><?php echo WPHOSTEL_CURRENCY.' '.$room->price?><br>
+			<?php echo $_room->prettify('price_type', $room->price_type);?></td>
 			<td><input type="text" value="[wphostel-book <?php echo $room->id?>]" size="15" onclick="this.select();" readonly></td>
 			<td><a href="admin.php?page=wphostel_rooms&action=edit&id=<?php echo $room->id?>"><?php _e('Edit', 'wphostel')?></a> | <a href="#" onclick="wphostelDeleteRoom(<?php echo $room->id?>);return false;"><?php _e('Delete', 'wphostel')?></a></td></tr>
 		<?php endforeach;?>

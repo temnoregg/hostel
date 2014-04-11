@@ -9,6 +9,7 @@
 					<option value="<?php echo $room->id?>" <?php if(!empty($_GET['room_id']) and $_GET['room_id'] == $room->id) echo 'selected'?>><?php echo $room->title;?></option>
 				<?php endforeach;?>
 			</select></div>
+			
 			<div><label><?php _e('No. beds to book:', 'wphostel')?></label> <input type="text" name="beds" value="<?php echo empty($booking->beds) ? 1 : $booking->beds?>" size="4"></div>
 			<div><label><?php _e('From date:', 'wphostel')?></label> <input type="text" size="10" name="from_date" value="<?php echo $from_date?>" class="wphostelDatePicker"></div>
 			<div><label><?php _e('To date:', 'wphostel')?></label> <input type="text" size="10" name="to_date" value="<?php echo $to_date?>" class="wphostelDatePicker"></div>

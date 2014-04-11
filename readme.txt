@@ -76,6 +76,9 @@ None yet, please ask in the forum
 
 == Changelog ==
 
+= Version 0.7.2 = 
+- "Per room" price is now available. When this is selected number of beds become irrelevant because your guests are booking the entire room.
+
 = Version 0.7 =
 
 - Added "wphostel-book" shortcode which allows you to place a booking button on any page (usually on a page where you have described your room manually, with pictures etc)

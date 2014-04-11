@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Hostel package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hostel 0.7\n"
+"Project-Id-Version: Hostel 0.7.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/hostel\n"
-"POT-Creation-Date: 2014-03-12 10:40:58+00:00\n"
+"POT-Creation-Date: 2014-04-11 10:10:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,63 +28,71 @@ msgstr ""
 msgid "Online booking is not enabled."
 msgstr ""
 
-#: controllers/shortcodes.php:40
+#: controllers/shortcodes.php:42
 msgid "This is a private room. You have to book all the %d beds"
 msgstr ""
 
-#: controllers/shortcodes.php:49
+#: controllers/shortcodes.php:51
 msgid ""
 "In your selection there are dates when the room is not available. Please "
 "select only dates available for booking"
 msgstr ""
 
-#: controllers/shortcodes.php:60
+#: controllers/shortcodes.php:62
 msgid ""
 "Thank you for your reservation request. We will get back to you when it is "
 "confirmed"
 msgstr ""
 
-#: controllers/shortcodes.php:130 views/list-rooms.html.php:13
+#: controllers/shortcodes.php:132 views/list-rooms.html.php:13
 #: views/list-rooms.html.php:24
 msgid "Book"
 msgstr ""
 
-#. #-#-#-#-#  hostel.pot (Hostel 0.7)  #-#-#-#-#
+#. #-#-#-#-#  hostel.pot (Hostel 0.7.2)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: models/hostel.php:69
+#: models/hostel.php:75
 msgid "Hostel"
 msgstr ""
 
-#: models/hostel.php:71 views/rooms.php:1
+#: models/hostel.php:77 views/rooms.php:1
 msgid "Manage Rooms"
 msgstr ""
 
-#: models/hostel.php:72
+#: models/hostel.php:78
 msgid "Manage Bookings"
 msgstr ""
 
-#: models/hostel.php:73
+#: models/hostel.php:79
 msgid "Unavailable Dates"
 msgstr ""
 
-#: models/hostel.php:74
+#: models/hostel.php:80
 msgid "Help"
 msgstr ""
 
-#: models/room.php:69 views/room.php:8
+#: models/room.php:72 views/room.php:8
 msgid "Private"
 msgstr ""
 
-#: models/room.php:70 views/room.php:9
+#: models/room.php:73 views/room.php:9
 msgid "Dorm"
 msgstr ""
 
-#: models/room.php:76 views/room.php:13
+#: models/room.php:79 views/room.php:13
 msgid "Ensuite"
 msgstr ""
 
-#: models/room.php:77 views/room.php:14
+#: models/room.php:80 views/room.php:14
 msgid "Shared"
+msgstr ""
+
+#: models/room.php:86 views/room.php:17
+msgid "Per person per night"
+msgstr ""
+
+#: models/room.php:87 views/room.php:18
+msgid "Per night for the whole room"
 msgstr ""
 
 #: views/booking-form.html.php:2
@@ -95,61 +103,61 @@ msgstr ""
 msgid "Select room:"
 msgstr ""
 
-#: views/booking-form.html.php:12 views/booking.html.php:11
+#: views/booking-form.html.php:13 views/booking.html.php:11
 msgid "No. beds to book:"
 msgstr ""
 
-#: views/booking-form.html.php:13 views/booking.html.php:12
+#: views/booking-form.html.php:14 views/booking.html.php:12
 #: views/list-rooms.html.php:2
 msgid "From date:"
 msgstr ""
 
-#: views/booking-form.html.php:14 views/booking.html.php:13
+#: views/booking-form.html.php:15 views/booking.html.php:13
 #: views/list-rooms.html.php:3
 msgid "To date:"
 msgstr ""
 
-#: views/booking-form.html.php:16 views/booking.html.php:16
+#: views/booking-form.html.php:17 views/booking.html.php:16
 msgid "Contact name:"
 msgstr ""
 
-#: views/booking-form.html.php:17 views/booking.html.php:17
+#: views/booking-form.html.php:18 views/booking.html.php:17
 msgid "Contact email:"
 msgstr ""
 
-#: views/booking-form.html.php:18 views/booking.html.php:18
+#: views/booking-form.html.php:19 views/booking.html.php:18
 msgid "Contact phone:"
 msgstr ""
 
-#: views/booking-form.html.php:19
+#: views/booking-form.html.php:20
 msgid "You are:"
 msgstr ""
 
-#: views/booking-form.html.php:20 views/booking.html.php:20
+#: views/booking-form.html.php:21 views/booking.html.php:20
 msgid "Male(s)"
 msgstr ""
 
-#: views/booking-form.html.php:21 views/booking.html.php:21
+#: views/booking-form.html.php:22 views/booking.html.php:21
 msgid "Female(s)"
 msgstr ""
 
-#: views/booking-form.html.php:22 views/booking.html.php:22
+#: views/booking-form.html.php:23 views/booking.html.php:22
 msgid "Couple"
 msgstr ""
 
-#: views/booking-form.html.php:23 views/booking.html.php:23
+#: views/booking-form.html.php:24 views/booking.html.php:23
 msgid "Mixed"
 msgstr ""
 
-#: views/booking-form.html.php:27
+#: views/booking-form.html.php:28
 msgid "Make Reservation"
 msgstr ""
 
-#: views/booking-form.html.php:36
+#: views/booking-form.html.php:37
 msgid "Please enter name!"
 msgstr ""
 
-#: views/booking-form.html.php:42
+#: views/booking-form.html.php:43
 msgid "Please enter email address!"
 msgstr ""
 
@@ -197,7 +205,7 @@ msgstr ""
 msgid "Go Back"
 msgstr ""
 
-#: views/booking.html.php:48 views/bookings.html.php:46 views/rooms.php:30
+#: views/booking.html.php:48 views/bookings.html.php:46 views/rooms.php:31
 msgid "Are you sure?"
 msgstr ""
 
@@ -265,7 +273,7 @@ msgstr ""
 msgid "Pending"
 msgstr ""
 
-#: views/bookings.html.php:28 views/rooms.php:21
+#: views/bookings.html.php:28 views/rooms.php:22
 msgid "Edit"
 msgstr ""
 
@@ -480,29 +488,25 @@ msgstr ""
 msgid "Price:"
 msgstr ""
 
-#: views/room.php:17
-msgid "Per person per night"
-msgstr ""
-
-#: views/room.php:18
+#: views/room.php:20
 msgid "Room description (optional):"
 msgstr ""
 
-#: views/room.php:19
+#: views/room.php:21
 msgid "Save room details"
 msgstr ""
 
-#: views/room.php:27
+#: views/room.php:29
 msgid ""
 "Please enter room title. This is important so you can recognize the room "
 "when editing it and when viewing its bookings"
 msgstr ""
 
-#: views/room.php:33
+#: views/room.php:35
 msgid "Please enter number of beds in the room. Use only numbers."
 msgstr ""
 
-#: views/room.php:39
+#: views/room.php:41
 msgid "Please enter room price, numbers only"
 msgstr ""
 
@@ -530,11 +534,11 @@ msgstr ""
 msgid "Book shortcode"
 msgstr ""
 
-#: views/rooms.php:21
+#: views/rooms.php:22
 msgid "Delete"
 msgstr ""
 
-#: views/rooms.php:25
+#: views/rooms.php:26
 msgid ""
 "When you place the booking shortcode a \"Book\" button will be automatically "
 "generated. Use it on a page where you have manually described your room with "
@@ -570,8 +574,4 @@ msgstr ""
 
 #: views/unavailable-dates.html.php:20
 msgid "Save Unavailable Rooms"
-msgstr ""
-
-#. Plugin URI of the plugin/theme
-msgid "http://backpackercompare.com/wp-hostel/"
 msgstr ""
