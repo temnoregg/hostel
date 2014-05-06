@@ -1,11 +1,11 @@
 <?php
 // main model containing general config and UI functions
 class WPHostel {
-   static function install($init = true) {
+   static function install($update = false) {
    	global $wpdb;	
    	$wpdb -> show_errors();
    	
-   	if($init) self::init();
+   	if(!$update) self::init();
 	  
 	   // rooms
    	if($wpdb->get_var("SHOW TABLES LIKE '".WPHOSTEL_ROOMS."'") != WPHOSTEL_ROOMS) {        
@@ -133,7 +133,7 @@ class WPHostel {
 		add_action('parse_request', array("WPHostelPayment", "parse_request"));
 		
 		$old_version = get_option('wphostel_version');
-		if(empty($old_version) or $old_version < 0.72) self :: install(false);
+		if(empty($old_version) or $old_version < 0.72) self :: install(true);
 		update_option('wphostel_version', '0.72');
 	}
 	

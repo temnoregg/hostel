@@ -76,8 +76,9 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.7.2 = 
+= Version 0.7.3 = 
 - "Per room" price is now available. When this is selected number of beds become irrelevant because your guests are booking the entire room.
+- Fixed bug: tables were not properly created on installation
 
 = Version 0.7 =
 
