@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Hostel package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hostel 0.7.2\n"
+"Project-Id-Version: Hostel 0.7.4\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/hostel\n"
-"POT-Creation-Date: 2014-04-11 10:10:03+00:00\n"
+"POT-Creation-Date: 2014-06-02 10:19:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Book"
 msgstr ""
 
-#. #-#-#-#-#  hostel.pot (Hostel 0.7.2)  #-#-#-#-#
+#. #-#-#-#-#  hostel.pot (Hostel 0.7.4)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: models/hostel.php:75
 msgid "Hostel"
@@ -363,93 +363,97 @@ msgstr ""
 msgid "Currency:"
 msgstr ""
 
-#: views/options.php:14
+#: views/options.php:13
+msgid "Custom"
+msgstr ""
+
+#: views/options.php:15
 msgid "Booking mode:"
 msgstr ""
 
-#: views/options.php:15 views/options.php:20
+#: views/options.php:16 views/options.php:21
 msgid "No booking"
 msgstr ""
 
-#: views/options.php:16 views/options.php:22
+#: views/options.php:17 views/options.php:23
 msgid "Manual / No Payment"
 msgstr ""
 
-#: views/options.php:17 views/options.php:23
+#: views/options.php:18 views/options.php:24
 msgid "Paypal"
 msgstr ""
 
-#: views/options.php:20
+#: views/options.php:21
 msgid ""
 "- In this mode your site will only show the information for the rooms and "
 "will not let the visitors book rooms"
 msgstr ""
 
-#: views/options.php:22
+#: views/options.php:23
 msgid ""
 "- In this mode your visitors will be able to request booking by clicking on "
 "button and filling their information in the booking form. You as admin will "
 "approve or reject the booking manually in the admin panel."
 msgstr ""
 
-#: views/options.php:23
+#: views/options.php:24
 msgid ""
 "- In this mode your visitors will be able to book and get their bookings "
 "activated instantly by paying by Paypal"
 msgstr ""
 
-#: views/options.php:28
+#: views/options.php:29
 msgid "Booking form URL:"
 msgstr ""
 
-#: views/options.php:28
+#: views/options.php:29
 msgid ""
 "This is the URL of the post or page where you have published the <a href=\"%s"
 "\" target=\"_blank\">booking form shortcode</a>"
 msgstr ""
 
-#: views/options.php:32
+#: views/options.php:33
 msgid "Your Paypal Email:"
 msgstr ""
 
-#: views/options.php:35
+#: views/options.php:36
 msgid ""
 "Send me email with booking details when someone makes or requests a booking"
 msgstr ""
 
-#: views/options.php:38
+#: views/options.php:39
 msgid "Email address to receive the notice:"
 msgstr ""
 
-#: views/options.php:39 views/options.php:48
+#: views/options.php:40 views/options.php:49
 msgid "Email subject:"
 msgstr ""
 
-#: views/options.php:40 views/options.php:49
+#: views/options.php:41 views/options.php:50
 msgid "Email message:"
 msgstr ""
 
-#: views/options.php:41 views/options.php:50
+#: views/options.php:42 views/options.php:51
 msgid "You can use the following variables:"
 msgstr ""
 
-#: views/options.php:41
+#: views/options.php:42
 msgid "(The URL to see the booking details in admin)"
 msgstr ""
 
-#: views/options.php:41 views/options.php:51
+#: views/options.php:42 views/options.php:52
 msgid "(Date/time when reservation is made)"
 msgstr ""
 
-#: views/options.php:44
+#: views/options.php:45
 msgid "Send confirmation email to user when booking is made"
 msgstr ""
 
-#: views/options.php:54
+#: views/options.php:55
 msgid "Save Options"
 msgstr ""
 
-#: views/options.php:59
+#: views/options.php:60
 msgid ""
 "Your feedback is most welcome! Please <a href=\"%s\" target=\"_blank\">let "
 "us know</a> what features and improvements you would like to see in the "

@@ -10,7 +10,7 @@
 		$curday_time = $datefrom_time + $i*24*3600;?>
 		<th><?php echo date($dateformat, $curday_time);?></th>
 	<?php endfor;?>	
-	<th><?php _e('Price per person')?></th><?php if($booking_mode != 'none'):?><th><?php _e('Book', 'wphostel')?></th><?php endif;?></tr>
+	<th><?php _e('Price per person', 'wphostel')?></th><?php if($booking_mode != 'none'):?><th><?php _e('Book', 'wphostel')?></th><?php endif;?></tr>
 	
 	<?php foreach($rooms as $room):
 		$can_book = true; ?>

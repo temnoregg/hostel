@@ -4,13 +4,14 @@
 	<form method="post" class="wphostel-form">
 		<div class="postbox wphostel-box">
 			<div><label><?php _e("Currency:", 'wphostel');?></label>
-				<select name="currency">
+				<select name="currency" onchange="this.value ? jQuery('#customCurrency').hide() : jQuery('#customCurrency').show(); ">
 				<?php foreach($currencies as $key=>$val):
 	            if($key==$currency) $selected='selected';
 	            else $selected='';?>
 	        		<option <?php echo $selected?> value='<?php echo $key?>'><?php echo $val?></option>
 	         <?php endforeach; ?>
-				</select></div>
+	         	<option value="" <?php if(!in_array($currency, $currency_keys)) echo 'selected'?>><?php _e('Custom', 'wphostel')?></option>
+				</select> <input type="text" id="customCurrency" name="custom_currency" style="display:<?php echo in_array($currency, $currency_keys) ? 'none' : 'inline';?>" value="<?php echo $currency?>"></div>
 			<div><label><?php _e('Booking mode:', 'wphostel')?></label> <select name="booking_mode" onchange="changeBookingMode(this.value);">
 				<option value="none" <?php if($booking_mode == 'none') echo 'selected'?>><?php _e('No booking', 'wphotel')?></option>		
 				<option value="manual" <?php if($booking_mode == 'manual') echo 'selected'?>><?php _e('Manual / No Payment', 'wphotel')?></option>

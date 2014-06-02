@@ -121,6 +121,10 @@ class WPHostel {
 		define( 'WPHOSTEL_PAYMENTS', $wpdb->prefix. "wphostel_payments");
 	
 		define( 'WPHOSTEL_VERSION', get_option('wphostel_version'));
+		
+		// if there's no currency, default it to USD
+		$currency = get_option('wphostel_currency');
+		if(empty($currency)) update_option('wphostel_currency', 'USD');
 		define( 'WPHOSTEL_CURRENCY', get_option('wphostel_currency'));
 		
 		// shortcodes
@@ -159,6 +163,7 @@ class WPHostel {
 	// manage general options
 	static function options() {
 		if(!empty($_POST['ok'])) {
+			if(empty($_POST['currency'])) $_POST['currency'] = $_POST['custom_currency'];
 			update_option('wphostel_currency', $_POST['currency']);
 			update_option('wphostel_booking_mode', $_POST['booking_mode']);
 			update_option('wphostel_email_options', array("do_email_admin"=>@$_POST['do_email_admin'], 
@@ -174,6 +179,7 @@ class WPHostel {
 		   "CAD"=>"CAD", "CHF"=>"CHF", "CZK"=>"CZK", "DKK"=>"DKK", "HKD"=>"HKD", "HUF"=>"HUF",
 		   "ILS"=>"ILS", "MXN"=>"MXN", "NOK"=>"NOK", "NZD"=>"NZD", "PLN"=>"PLN", "SEK"=>"SEK",
 		   "SGD"=>"SGD");
+		$currency_keys = array_keys($currencies);  
 		   
 		$booking_mode = get_option('wphostel_booking_mode');   
 		$email_options = get_option('wphostel_email_options');
