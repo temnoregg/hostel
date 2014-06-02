@@ -2,7 +2,7 @@
 Contributors: prasunsen
 Tags: hostel, hotel, booking, bnb, rooms
 Requires at least: 3.3
-Tested up to: 3.8
+Tested up to: 3.9.1
 Stable tag: trunk
 License: GPL2
 
@@ -48,7 +48,7 @@ For translating the plugin check the Help page under the Hostel menu in your adm
 
 The following translations are currently available. Please note they are maintained by volunteer translators and we can't guarantee their accuracy.
 
-Spanish: wphostel-es_ES.mo (http://backpackercompare.com/wp-content/uploads/2014/06/wphostel-es_ES.mo | wphostel-es_ES.mo) | wphostel-es_ES.po (http://backpackercompare.com/wp-content/uploads/2014/06/wphostel-es_ES.po | wphostel-es_ES.po)
+Spanish: [wphostel-es_ES.mo](http://backpackercompare.com/wp-content/uploads/2014/06/wphostel-es_ES.mo | wphostel-es_ES.mo) | [wphostel-es_ES.po](http://backpackercompare.com/wp-content/uploads/2014/06/wphostel-es_ES.po | wphostel-es_ES.po)
 
 == Installation ==
 
