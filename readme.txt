@@ -48,7 +48,7 @@ For translating the plugin check the Help page under the Hostel menu in your adm
 
 The following translations are currently available. Please note they are maintained by volunteer translators and we can't guarantee their accuracy.
 
-Spanish: wphostel-es_ES.mo (https://mega.co.nz/#!Iosl1QDS!JkvWovLsd6ZOeIf1EH7lvFevzR9Xi_wjioUm1wXQMW8) | wphostel-es_ES.po (https://mega.co.nz/#!s0UyyYjb!5AY4i-s3bPukpK1LEfPG8xtzTeD_XBCqr-McAvIC2D0)
+Spanish: wphostel-es_ES.mo (http://backpackercompare.com/wp-content/uploads/2014/06/wphostel-es_ES.mo | wphostel-es_ES.mo) | wphostel-es_ES.po (http://backpackercompare.com/wp-content/uploads/2014/06/wphostel-es_ES.po | wphostel-es_ES.po)
 
 == Installation ==
 
@@ -82,7 +82,7 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.7.4 = 
+= Version 0.7.5 = 
 - "Per room" price is now available. When this is selected number of beds become irrelevant because your guests are booking the entire room.
 - Fixed bug: tables were not properly created on installation
 - Setting a custom currently is available
