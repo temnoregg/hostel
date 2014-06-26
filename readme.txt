@@ -1,6 +1,6 @@
 === Hostel ===
 Contributors: prasunsen
-Tags: hostel, hotel, booking, bnb, rooms
+Tags: hostel, hotel, booking, bnb, rooms, wpmu, touch
 Requires at least: 3.3
 Tested up to: 3.9.1
 Stable tag: trunk
@@ -36,6 +36,8 @@ Create your hostel, small hotel, or BnB site with Wordpress:
 - Manage bookings, process payments, contact customers
 - List your rooms by using shortcodes
 
+There are more and better features + premium support in the PRO version. Check it on our new site: [wp-hostel.com](http://wp-hostel.com "wp-hostel.com") 
+
 ###Shortcodes###
 
 - [wphostel-list] will display a table with your available rooms. A date selector on the top lets the user choose dates of their visit and then the rooms list is updated. If you have enabled booking in your Hostel settings page, the table will also show "Book" button when appropriate. The button will automaically load the booking form.
@@ -48,7 +50,7 @@ For translating the plugin check the Help page under the Hostel menu in your adm
 
 The following translations are currently available. Please note they are maintained by volunteer translators and we can't guarantee their accuracy.
 
-Spanish: [wphostel-es_ES.mo](http://backpackercompare.com/wp-content/uploads/2014/06/wphostel-es_ES.mo | wphostel-es_ES.mo) | [wphostel-es_ES.po](http://backpackercompare.com/wp-content/uploads/2014/06/wphostel-es_ES.po | wphostel-es_ES.po)
+Spanish: [wphostel-es_ES.mo](http://backpackercompare.com/wp-content/uploads/2014/06/wphostel-es_ES.mo "wphostel-es_ES.mo") | [wphostel-es_ES.po](http://backpackercompare.com/wp-content/uploads/2014/06/wphostel-es_ES.po "wphostel-es_ES.po")
 
 == Installation ==
 
@@ -82,10 +84,11 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.7.5 = 
+= Version 0.7.6 = 
 - "Per room" price is now available. When this is selected number of beds become irrelevant because your guests are booking the entire room.
 - Fixed bug: tables were not properly created on installation
 - Setting a custom currently is available
+- Added ajax loading of the beds in the booking form to prevent confusing numbers on the private rooms.
 
 = Version 0.7 =
 

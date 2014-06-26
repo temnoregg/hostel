@@ -99,6 +99,9 @@ class WPHostel {
 		);
 		wp_enqueue_script("wphostel-common");
 		
+		$translation_array = array('ajax_url' => admin_url('admin-ajax.php'));	
+		wp_localize_script( 'wphostel-common', 'wphostel_i18n', $translation_array );	
+		
 		// jQuery Validator
 		wp_enqueue_script(
 				'jquery-validator',

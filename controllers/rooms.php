@@ -41,4 +41,24 @@ class WPHostelRooms {
 			break;
 		}
 	}
+	
+	// ajax called function that returns the default number of beds for the booking form:
+	// for dorm rooms and "per room" price return 1
+	// for private rooms return max beds
+	// outputs also 0 or 1 after the | to show whether the user can change or not the number of rooms
+	static function default_beds() {
+		global $wpdb;
+		
+		// select room
+		$room = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WPHOSTEL_ROOMS." WHERE id=%d", $_POST['room_id']));
+		
+		if($room->rtype == 'dorm' or $room->price_type == 'per-room') {
+			echo "1";
+			if($room->rtype == 'dorm') echo "|1";
+			else echo "|0";
+		}
+		else echo $room->beds.'|0';		
+		
+		exit;
+	}
 }

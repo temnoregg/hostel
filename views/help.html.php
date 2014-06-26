@@ -1,6 +1,8 @@
 <div class="wrap">
 	<h1><?php _e('Hostel for WordPress', 'wphostel')?></h1>
 	
+	<p><b><?php printf(__('This plugin is a light version of <a href="%s" target="_blank">Hostel PRO</a>', 'wphostel'), 'http://wp-hostel.com')?></b></p>
+	
 	<p><?php _e('This is a plugin for managing hostels, BNB sites, and small hotel sites. You get an area where to manage your available rooms and prices, and the bookings made by visitors. Start with the main settings page to set up your booking mode, currency etc. Then once you enter your property and room details, you can use the following shortcodes:', 'wphostel')?></p>
 	
 	<ol>

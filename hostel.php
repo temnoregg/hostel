@@ -4,7 +4,7 @@ Plugin Name: Hostel
 Plugin URI: http://backpackercompare.com/wp-hostel/
 Description: Hostel / BnB management plugin 
 Author: Kiboko Labs
-Version: 0.7.5
+Version: 0.7.6
 Author URI: http://calendarscripts.info/
 License: GPLv2 or later
 */
@@ -23,6 +23,7 @@ require(WPHOSTEL_PATH."/models/payment.php");
 require(WPHOSTEL_PATH."/controllers/bookings.php");
 require(WPHOSTEL_PATH."/controllers/shortcodes.php");
 require(WPHOSTEL_PATH."/controllers/help.php");
+require(WPHOSTEL_PATH."/controllers/ajax.php");
 
 add_action('init', array("WPHostel", "init"));
 
@@ -37,5 +38,5 @@ add_action( 'wp_enqueue_scripts', array("WPHostel", "scripts"));
 add_action( 'widgets_init', array("WPHostel", "register_widgets") );
 
 // other actions
-add_action('wp_ajax_hostel_ajax', 'wphostel_ajax');
-add_action('wp_ajax_nopriv_hostel_ajax', 'wphostel_ajax');
+add_action('wp_ajax_wphostel_ajax', 'wphostel_ajax');
+add_action('wp_ajax_nopriv_wphostel_ajax', 'wphostel_ajax');

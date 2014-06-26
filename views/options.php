@@ -1,6 +1,8 @@
 <div class="wrap">
 	<h1><?php _e("Hostel Options", 'wphostel')?></h1>
 	
+	<p><b><?php printf(__('This plugin is a light version of <a href="%s" target="_blank">Hostel PRO</a>', 'wphostel'), 'http://wp-hostel.com')?></b></p>
+	
 	<form method="post" class="wphostel-form">
 		<div class="postbox wphostel-box">
 			<div><label><?php _e("Currency:", 'wphostel');?></label>
@@ -13,9 +15,9 @@
 	         	<option value="" <?php if(!in_array($currency, $currency_keys)) echo 'selected'?>><?php _e('Custom', 'wphostel')?></option>
 				</select> <input type="text" id="customCurrency" name="custom_currency" style="display:<?php echo in_array($currency, $currency_keys) ? 'none' : 'inline';?>" value="<?php echo $currency?>"></div>
 			<div><label><?php _e('Booking mode:', 'wphostel')?></label> <select name="booking_mode" onchange="changeBookingMode(this.value);">
-				<option value="none" <?php if($booking_mode == 'none') echo 'selected'?>><?php _e('No booking', 'wphotel')?></option>		
-				<option value="manual" <?php if($booking_mode == 'manual') echo 'selected'?>><?php _e('Manual / No Payment', 'wphotel')?></option>
-				<option value="paypal" <?php if($booking_mode == 'paypal') echo 'selected'?>><?php _e('Paypal', 'wphotel')?></option>
+				<option value="none" <?php if($booking_mode == 'none') echo 'selected'?>><?php _e('No booking', 'wphostel')?></option>		
+				<option value="manual" <?php if($booking_mode == 'manual') echo 'selected'?>><?php _e('Manual / No Payment', 'wphostel')?></option>
+				<option value="paypal" <?php if($booking_mode == 'paypal') echo 'selected'?>><?php _e('Paypal', 'wphostel')?></option>
 				</select>
 				<div class="wphostel-help">
 					<p><strong><?php _e('No booking', 'wphostel')?></strong> <?php _e('- In this mode your site will only show the information for the rooms and will not let the visitors book rooms', 'wphostel')?></p>
