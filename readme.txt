@@ -84,11 +84,12 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.7.6 = 
+= Version 0.7.7 = 
 - "Per room" price is now available. When this is selected number of beds become irrelevant because your guests are booking the entire room.
 - Fixed bug: tables were not properly created on installation
 - Setting a custom currently is available
 - Added ajax loading of the beds in the booking form to prevent confusing numbers on the private rooms.
+- Fixed bug in [wphostel-book] shortcode
 
 = Version 0.7 =
 

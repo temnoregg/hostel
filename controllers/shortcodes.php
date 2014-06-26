@@ -129,6 +129,12 @@ class WPHostelShortcodes {
 		global $post;
 		
 		$room_id = $atts[0];
+		
+		// when we have clicked the booking button load the booking form
+		if(!empty($_GET['in_booking_mode'])  and $_GET['room_id']==$room_id) {
+			return self :: booking();
+		} 
+	
 		$text = empty($atts[1]) ? __('Book', 'wphostel') : $atts[1];
 		
 		return '<input type="button" onclick="window.location='."'".wphostel_book_url($post->ID, $room_id, date("Y-m-d"), date("Y-m-d", strtotime("tomorrow")))."'".'" value="'.$text.'">';
