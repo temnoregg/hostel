@@ -2,15 +2,35 @@
 # This file is distributed under the same license as the Hostel package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hostel 0.7.7\n"
+"Project-Id-Version: Hostel 0.8\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/hostel\n"
-"POT-Creation-Date: 2014-06-26 13:38:20+00:00\n"
+"POT-Creation-Date: 2014-07-22 09:46:53+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: controllers/ajax.php:15 controllers/shortcodes.php:11
+msgid "Online booking is not enabled."
+msgstr ""
+
+#: controllers/bookings.php:167
+msgid "This is a private room. You have to book all the %d beds"
+msgstr ""
+
+#: controllers/bookings.php:176
+msgid ""
+"In your selection there are dates when the room is not available or there "
+"are not enough free beds. Please check your selection."
+msgstr ""
+
+#: controllers/bookings.php:187
+msgid ""
+"Thank you for your reservation request. We will get back to you when it is "
+"confirmed"
+msgstr ""
 
 #: controllers/rooms.php:12
 msgid "Room added."
@@ -24,32 +44,12 @@ msgstr ""
 msgid "Room deleted."
 msgstr ""
 
-#: controllers/shortcodes.php:8
-msgid "Online booking is not enabled."
-msgstr ""
-
-#: controllers/shortcodes.php:42
-msgid "This is a private room. You have to book all the %d beds"
-msgstr ""
-
-#: controllers/shortcodes.php:51
-msgid ""
-"In your selection there are dates when the room is not available. Please "
-"select only dates available for booking"
-msgstr ""
-
-#: controllers/shortcodes.php:62
-msgid ""
-"Thank you for your reservation request. We will get back to you when it is "
-"confirmed"
-msgstr ""
-
-#: controllers/shortcodes.php:138 views/list-rooms.html.php:13
-#: views/list-rooms.html.php:24
+#: controllers/shortcodes.php:62 views/partial/rooms-table.html.php:7
+#: views/partial/rooms-table.html.php:26
 msgid "Book"
 msgstr ""
 
-#. #-#-#-#-#  hostel.pot (Hostel 0.7.7)  #-#-#-#-#
+#. #-#-#-#-#  hostel.pot (Hostel 0.8)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: models/hostel.php:75
 msgid "Hostel"
@@ -69,6 +69,34 @@ msgstr ""
 
 #: models/hostel.php:80
 msgid "Help"
+msgstr ""
+
+#: models/hostel.php:103
+msgid "Please enter name!"
+msgstr ""
+
+#: models/hostel.php:104
+msgid "Please enter email address!"
+msgstr ""
+
+#: models/hostel.php:105
+msgid "Please enter number of beds, numbers only"
+msgstr ""
+
+#: models/hostel.php:106
+msgid "Please enter arrival date"
+msgstr ""
+
+#: models/hostel.php:107
+msgid "Please enter date of leaving"
+msgstr ""
+
+#: models/hostel.php:108
+msgid "Date of arrival cannot be in the past"
+msgstr ""
+
+#: models/hostel.php:109
+msgid "Date of arrival cannot be after date of leave"
 msgstr ""
 
 #: models/room.php:72 views/room.php:8
@@ -151,14 +179,6 @@ msgstr ""
 
 #: views/booking-form.html.php:28
 msgid "Make Reservation"
-msgstr ""
-
-#: views/booking-form.html.php:37
-msgid "Please enter name!"
-msgstr ""
-
-#: views/booking-form.html.php:43
-msgid "Please enter email address!"
 msgstr ""
 
 #: views/booking.html.php:2
@@ -336,28 +356,7 @@ msgstr ""
 msgid "Show availability"
 msgstr ""
 
-#: views/list-rooms.html.php:8 views/room.php:7 views/rooms.php:13
-#: views/unavailable-dates.html.php:12
-msgid "Room type"
-msgstr ""
-
-#: views/list-rooms.html.php:8 views/rooms.php:14
-msgid "Bathroom"
-msgstr ""
-
-#: views/list-rooms.html.php:13
-msgid "Price per person"
-msgstr ""
-
-#: views/list-rooms.html.php:20
-msgid "%d beds"
-msgstr ""
-
-#: views/list-rooms.html.php:25
-msgid "Not available"
-msgstr ""
-
-#: views/list-rooms.html.php:40
+#: views/list-rooms.html.php:21
 msgid "Please select up to 5 days interval."
 msgstr ""
 
@@ -409,61 +408,72 @@ msgid ""
 msgstr ""
 
 #: views/options.php:31
-msgid "Booking form URL:"
-msgstr ""
-
-#: views/options.php:31
-msgid ""
-"This is the URL of the post or page where you have published the <a href=\"%s"
-"\" target=\"_blank\">booking form shortcode</a>"
-msgstr ""
-
-#: views/options.php:35
 msgid "Your Paypal Email:"
 msgstr ""
 
-#: views/options.php:38
+#: views/options.php:34
 msgid ""
 "Send me email with booking details when someone makes or requests a booking"
 msgstr ""
 
-#: views/options.php:41
+#: views/options.php:37
 msgid "Email address to receive the notice:"
 msgstr ""
 
-#: views/options.php:42 views/options.php:51
+#: views/options.php:38 views/options.php:47
 msgid "Email subject:"
 msgstr ""
 
-#: views/options.php:43 views/options.php:52
+#: views/options.php:39 views/options.php:48
 msgid "Email message:"
 msgstr ""
 
-#: views/options.php:44 views/options.php:53
+#: views/options.php:40 views/options.php:49
 msgid "You can use the following variables:"
 msgstr ""
 
-#: views/options.php:44
+#: views/options.php:40
 msgid "(The URL to see the booking details in admin)"
 msgstr ""
 
-#: views/options.php:44 views/options.php:54
+#: views/options.php:40 views/options.php:50
 msgid "(Date/time when reservation is made)"
 msgstr ""
 
-#: views/options.php:47
+#: views/options.php:43
 msgid "Send confirmation email to user when booking is made"
 msgstr ""
 
-#: views/options.php:57
+#: views/options.php:53
 msgid "Save Options"
 msgstr ""
 
-#: views/options.php:62
+#: views/options.php:58
 msgid ""
 "Your feedback is most welcome! Please <a href=\"%s\" target=\"_blank\">let "
 "us know</a> what features and improvements you would like to see in the "
 "plugin."
+msgstr ""
+
+#: views/partial/rooms-table.html.php:2 views/room.php:7 views/rooms.php:13
+#: views/unavailable-dates.html.php:12
+msgid "Room type"
+msgstr ""
+
+#: views/partial/rooms-table.html.php:2 views/rooms.php:14
+msgid "Bathroom"
+msgstr ""
+
+#: views/partial/rooms-table.html.php:7
+msgid "Price per person"
+msgstr ""
+
+#: views/partial/rooms-table.html.php:14
+msgid "%d beds"
+msgstr ""
+
+#: views/partial/rooms-table.html.php:28
+msgid "Not available"
 msgstr ""
 
 #: views/pay-paypal.html.php:1

@@ -99,7 +99,14 @@ class WPHostel {
 		);
 		wp_enqueue_script("wphostel-common");
 		
-		$translation_array = array('ajax_url' => admin_url('admin-ajax.php'));	
+		$translation_array = array('ajax_url' => admin_url('admin-ajax.php'),
+			'enter_name' =>  __('Please enter name!', 'wphostel'),
+			'enter_email' => __('Please enter email address!', 'wphostel'),
+			'beds_required' => __('Please enter number of beds, numbers only', 'wphostel'),
+			'from_date_required' => __('Please enter arrival date', 'wphostel'),
+			'to_date_required' => __('Please enter date of leaving', 'wphostel'),
+			'from_date_atleast_today' => __('Date of arrival cannot be in the past', 'wphostel'),
+			'from_date_before_to' => __('Date of arrival cannot be after date of leave', 'wphostel'),);	
 		wp_localize_script( 'wphostel-common', 'wphostel_i18n', $translation_array );	
 		
 		// jQuery Validator
@@ -174,7 +181,7 @@ class WPHostel {
 				"email_admin_subject"=>$_POST['email_admin_subject'], "email_admin_message"=>$_POST['email_admin_message'],
 				"email_user_subject"=>$_POST['email_user_subject'], "email_user_message"=>$_POST['email_user_message']));
 			update_option('wphostel_paypal', $_POST['paypal']);
-			update_option('wphostel_booking_url', $_POST['booking_url']);		
+			// update_option('wphostel_booking_url', $_POST['booking_url']);		
 		}		
 		
 		$currency = get_option('wphostel_currency');

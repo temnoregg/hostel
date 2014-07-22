@@ -1,31 +1,12 @@
-<form method="post" onsubmit="return validateHostelForm(this);">
+<form method="post">
 	<p><?php _e('From date:', 'wphostel')?> <input type="text" name="wphostel_from" value="<?php echo $datefrom?>" class="wphostelDatePicker"></p>
 	<p><?php _e('To date:', 'wphostel')?> <input type="text" name="wphostel_to" value="<?php echo $dateto?>" class="wphostelDatePicker"></p>
-	<p><input type="submit" value="<?php _e('Show availability', 'wphostel')?>"></p>
+	<p><input type="button" value="<?php _e('Show availability', 'wphostel')?>" onclick="validateHostelForm(this.form);"></p>
 </form>
 
-<table>
-	<tr><th><?php _e('Room type', 'wphostel')?></th><th><?php _e('Bathroom', 'wphostel')?></th>
-	<?php for($i=0; $i < $numdays; $i++):
-		$curday_time = $datefrom_time + $i*24*3600;?>
-		<th><?php echo date($dateformat, $curday_time);?></th>
-	<?php endfor;?>	
-	<th><?php _e('Price per person', 'wphostel')?></th><?php if($booking_mode != 'none'):?><th><?php _e('Book', 'wphostel')?></th><?php endif;?></tr>
-	
-	<?php foreach($rooms as $room):
-		$can_book = true; ?>
-		<tr><td><?php echo $_room->prettify('rtype', $room['rtype'])?></td><td><?php echo $_room->prettify('bathroom', $room['bathroom'])?></td>
-		<?php for($i=0; $i < $numdays; $i++):
-			if(!$room['days'][$i]['available_beds']) $can_book = false;?>
-			<td><?php echo $room['days'][$i]['available_beds'] ? sprintf(__('%d beds', 'wphostel'), $room['days'][$i]['available_beds'])	 : "X"?></td>
-		<?php endfor;?>	
-		<td><?php echo WPHOSTEL_CURRENCY.' '.$room['price'].' <br>('.$_room->prettify('price_type', $room['price_type']).')';?></td>
-		<?php if($booking_mode != 'none'):?><td align="center"><?php if($can_book):?>
-			<input type="button" value="<?php _e('Book', 'wphostel');?>" onclick="window.location='<?php echo wphostel_book_url($post->ID, $room['id'], $datefrom, $dateto)?>'">
-		<?php else: _e('Not available', 'wphostel');
-		endif;?></td><?php endif;?></tr>
-	<?php endforeach;?>
-</table>
+<div id="wphostelRoomsTable<?php echo $shortcode_id?>">
+	<?php echo WPHostelRooms :: availability_table($shortcode_id);?>
+</div>
 
 <script type="text/javascript">
 function validateHostelForm(frm) {
@@ -40,7 +21,13 @@ function validateHostelForm(frm) {
 		 alert("<?php _e('Please select up to 5 days interval.', 'wphostel')?>");
 		 return false;
 	}
-	return true;
+
+	data = {'action': 'wphostel_ajax', 'type': 'list_rooms', 'wphostel_from' : frm.wphostel_from.value, 
+		'wphostel_to' : frm.wphostel_to.value, 'shortcode_id' : '<?php echo $shortcode_id?>'};
+	jQuery.post(wphostel_i18n.ajax_url, data, function(msg){
+			jQuery('#wphostelRoomsTable<?php echo $shortcode_id?>').html(msg);
+		});
+	
 }
 jQuery(document).ready(function() {
     jQuery('.wphostelDatePicker').datepicker({

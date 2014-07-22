@@ -128,4 +128,66 @@ class WPHostelBookings {
 		
 		require(WPHOSTEL_PATH."/views/unavailable-dates.html.php");
 	}
+	
+	// do the booking
+	static function book() {
+		global $wpdb, $post;
+		
+		// insert booking details
+			$_booking = new WPHostelBooking();
+			$_room = new WPHostelRoom();
+			
+			$from_date = $_POST['from_date'];
+			$to_date = $_POST['to_date'];
+			
+			// make sure it's not a duplicate
+			$bid = $wpdb->get_var($wpdb->prepare("SELECT id FROM ".WPHOSTEL_BOOKINGS."
+				WHERE room_id=%d AND from_date=%s AND to_date=%s AND contact_email=%s",
+				$_POST['room_id'], $from_date, $to_date, $_POST['contact_email']));
+				
+			// select the room
+			$room = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WPHOSTEL_ROOMS." WHERE id=%d", $_POST['room_id']));	
+			$check_room = (array)$room;	
+			
+			if($room->price_type == 'per-room') $_POST['beds'] = 1;
+				
+			// calculate cost
+			$datefrom_time = strtotime($from_date);
+			$dateto_time = strtotime($to_date);		
+			$numdays = ($dateto_time   -  $datefrom_time) / (24 * 3600);	
+			
+			$cost = $numdays * $_POST['beds'] * $room->price;	
+			$_POST['amount_paid'] =  0;
+			$_POST['amount_due'] = $cost;			
+			$_POST['status'] = 'pending';
+										
+			if(empty($bid)) {
+				// if this is a private room, we cannot book less beds than the room has
+				if($room->rtype == 'private' and $_POST['beds'] != $room->beds and $room->price_type != 'per-room') {
+					return '<!--BOOKERROR-->'.sprintf(__('This is a private room. You have to book all the %d beds', 'wphostel'), $room->beds);
+				}				
+				
+				// select all bookings in the given period
+				$bookings = $_booking->select_in_period($from_date, $to_date);
+								
+				// make sure all dates are available
+				$check_room = $_room->availability($check_room, $bookings, $from_date, $to_date, $numdays, $datefrom_time, $dateto_time);
+				foreach($check_room['days']	as $day) {
+					if(!$day['available_beds'] or $day['available_beds'] < $_POST['beds']) return '<!--BOOKERROR-->'. __('In your selection there are dates when the room is not available or there are not enough free beds. Please check your selection.','wphostel');
+				}		
+						
+				$bid = $_booking->add($_POST);
+			}
+			
+			// if paypal display payment button otherwise display success message
+			if(get_option('wphostel_booking_mode') == 'paypal') {
+				include(WPHOSTEL_PATH."/views/pay-paypal.html.php");
+			}
+			else {
+				echo "<p>".__('Thank you for your reservation request. We will get back to you when it is confirmed', 'wphostel')."</p>";
+				
+				// send email if you have to
+				$_booking->email($bid);
+			}
+	}
 }

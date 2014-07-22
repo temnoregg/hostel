@@ -61,4 +61,35 @@ class WPHostelRooms {
 		
 		exit;
 	}
+	
+	// displays the availability table of all rooms by given dates
+	static function availability_table($shortcode_id) {
+		global $wpdb;
+		
+		$_room = new WPHostelRoom();
+		$_booking = new WPHostelBooking();
+		$dateformat = get_option('date_format');
+		$booking_mode = get_option('wphostel_booking_mode');
+				
+		// the dropdown defaults to "from tomorrow to 1 day after"
+		$datefrom = empty($_POST['wphostel_from']) ? date("Y-m-d", strtotime("tomorrow")) : $_POST['wphostel_from'];
+		$dateto = empty($_POST['wphostel_to']) ? date("Y-m-d", strtotime("+ 2 days")) : $_POST['wphostel_to'];
+		
+		// select all rooms
+		$rooms = $wpdb->get_results("SELECT * FROM ".WPHOSTEL_ROOMS." ORDER BY price", ARRAY_A);
+		
+		// select all bookings in the given period
+		$bookings = $_booking->select_in_period($datefrom, $dateto);
+		
+		$datefrom_time = strtotime($datefrom);
+		$dateto_time = strtotime($dateto);		
+		$numdays = ($dateto_time   -  $datefrom_time) / (24 * 3600);
+		
+		// match bookings to rooms so for each date we know if the room is booked or not
+		foreach($rooms as $cnt=>$room) {
+			$rooms[$cnt] = $_room->availability($room, $bookings, $datefrom, $dateto, $numdays, $datefrom_time, $dateto_time);			
+		} // end foreach room
+		
+		include(WPHOSTEL_PATH."/views/partial/rooms-table.html.php");
+	} // end availability table
 }

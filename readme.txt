@@ -84,7 +84,10 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.7.7 = 
+= Version 0.8 = 
+- Reworked all forms to work only with Ajax. This will let you use multiple 
+- Removed the requirement and setting for booking form URL. This is no longer needed
+- Improved the booking form validations
 - "Per room" price is now available. When this is selected number of beds become irrelevant because your guests are booking the entire room.
 - Fixed bug: tables were not properly created on installation
 - Setting a custom currently is available

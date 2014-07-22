@@ -2,8 +2,8 @@
 	<p><a href="<?php echo get_permalink($post->ID)?>"><?php _e('Back to the listing of rooms', 'wphostel')?></a></p>
 <?php endif;?>
 
-<div class="wrap wphostel-box">
-		<form class='wphostel-form' method="post" onsubmit="return WPHostelValidateBooking(this);">
+<div class="wrap wphostel-box" id="WPHostelBooking<?php echo $shortcode_id?>">
+		<form class='wphostel-form' method="post" onsubmit="return WPHostelValidateBooking(this);" id="WPHostelBooking<?php echo $shortcode_id?>">
 			<div><label><?php _e('Select room:', 'wphostel')?></label> <select name="room_id" onchange="WPHostelChangeRoom(this.value, this.form);">
 				<?php foreach($rooms as $room):?>
 					<option value="<?php echo $room->id?>" <?php if(!empty($_GET['room_id']) and $_GET['room_id'] == $room->id) echo 'selected'?>><?php echo $room->title;?></option>
@@ -25,29 +25,16 @@
 			</select></div>
 					
 			<div align="center">
-				<input type="submit" value="<?php _e('Make Reservation', 'wphostel')?>">
+				<input type="button" value="<?php _e('Make Reservation', 'wphostel')?>" onclick="WPHostelValidateBooking(this.form);">
 			</div>
 			<input type="hidden" name="wphostel_book" value="1">
+			<input type="hidden" name="action" value="wphostel_ajax">
+			<input type="hidden" name="type" value="book">
+			<input type="hidden" name="shortcode_id" value="<?php echo $shortcode_id?>">
 		</form>
 	</div>
 	
 <script type="text/javascript" >
-function WPHostelValidateBooking(frm) {
-	if(frm.contact_name.value == '') {
-		alert("<?php _e('Please enter name!', 'wphostel');?>");
-		frm.contact_name.focus();
-		return false;
-	}
-	
-	if(frm.contact_email.value == '') {
-		alert("<?php _e('Please enter email address!', 'wphostel');?>");
-		frm.contact_email.focus();
-		return false;
-	}
-	
-	return true;
-}
-
 jQuery(document).ready(function() {
     jQuery('.wphostelDatePicker').datepicker({
         dateFormat : 'yy-mm-dd'

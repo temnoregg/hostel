@@ -26,11 +26,7 @@
 					<p><strong><?php _e('Paypal', 'wphotel')?></strong> <?php _e('- In this mode your visitors will be able to book and get their bookings activated instantly by paying by Paypal', 'wphostel')?></p>
 				</div>		
 			</div>	
-			
-			<div id="wphostelBookingEnabled" style="display:<?php echo ($booking_mode!='none')?'block':'none'?>">
-				<label><?php _e('Booking form URL:', 'wphostel')?></label> <input type="text" name="booking_url" value="<?php echo get_option('wphostel_booking_url');?>" size="40"> <?php printf(__('This is the URL of the post or page where you have published the <a href="%s" target="_blank">booking form shortcode</a>', 'wphostel'), "admin.php?page=wphostel_help");?>
-			</div>
-			
+					
 			<div id="wphostelPaypal" style="display:<?php echo ($booking_mode=='paypal')?'block':'none'?>">
 				<label><?php _e('Your Paypal Email:', 'wphostel')?></label> <input type="text" name="paypal" value="<?php echo @$paypal?>">
 			</div>
@@ -66,8 +62,5 @@
 function changeBookingMode(val) {
 	if(val=='paypal') jQuery('#wphostelPaypal').show();
 	else jQuery('#wphostelPaypal').hide();
-	
-	if(val!='none') jQuery('#wphostelBookingEnabled').show();
-	else jQuery('#wphostelBookingEnabled').hide();
 }
 </script>
