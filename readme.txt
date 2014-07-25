@@ -84,7 +84,7 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.8.1 =
+= Version 0.8.2 =
 - Changed the booking form design to avoid styling issues
 
 = Version 0.8 = 

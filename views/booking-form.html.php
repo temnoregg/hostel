@@ -3,7 +3,7 @@
 <?php endif;?>
 
 <div class="wrap wphostel-box" id="WPHostelBooking<?php echo $shortcode_id?>">
-		<form class='wphostel-form' method="post" onsubmit="return WPHostelValidateBooking(this);" id="WPHostelBooking<?php echo $shortcode_id?>">
+		<form class='wphostel-form-simple' method="post" onsubmit="return WPHostelValidateBooking(this);" id="WPHostelBooking<?php echo $shortcode_id?>">
 			<p><label><?php _e('Select room:', 'wphostel')?></label> <br />
 			<select name="room_id" onchange="WPHostelChangeRoom(this.value, this.form);">
 				<?php foreach($rooms as $room):?>
