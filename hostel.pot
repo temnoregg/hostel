@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Hostel package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hostel 0.8\n"
+"Project-Id-Version: Hostel 0.8.3\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/hostel\n"
-"POT-Creation-Date: 2014-07-22 09:46:53+00:00\n"
+"POT-Creation-Date: 2014-08-14 14:29:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Book"
 msgstr ""
 
-#. #-#-#-#-#  hostel.pot (Hostel 0.8)  #-#-#-#-#
+#. #-#-#-#-#  hostel.pot (Hostel 0.8.3)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: models/hostel.php:75
 msgid "Hostel"
@@ -131,53 +131,53 @@ msgstr ""
 msgid "Select room:"
 msgstr ""
 
-#: views/booking-form.html.php:13 views/booking.html.php:11
+#: views/booking-form.html.php:14 views/booking.html.php:11
 msgid "No. beds to book:"
 msgstr ""
 
-#: views/booking-form.html.php:14 views/booking.html.php:12
+#: views/booking-form.html.php:15 views/booking.html.php:12
 #: views/list-rooms.html.php:2
 msgid "From date:"
 msgstr ""
 
-#: views/booking-form.html.php:15 views/booking.html.php:13
+#: views/booking-form.html.php:16 views/booking.html.php:13
 #: views/list-rooms.html.php:3
 msgid "To date:"
 msgstr ""
 
-#: views/booking-form.html.php:17 views/booking.html.php:16
+#: views/booking-form.html.php:18 views/booking.html.php:16
 msgid "Contact name:"
 msgstr ""
 
-#: views/booking-form.html.php:18 views/booking.html.php:17
+#: views/booking-form.html.php:19 views/booking.html.php:17
 msgid "Contact email:"
 msgstr ""
 
-#: views/booking-form.html.php:19 views/booking.html.php:18
+#: views/booking-form.html.php:20 views/booking.html.php:18
 msgid "Contact phone:"
 msgstr ""
 
-#: views/booking-form.html.php:20
+#: views/booking-form.html.php:21
 msgid "You are:"
 msgstr ""
 
-#: views/booking-form.html.php:21 views/booking.html.php:20
+#: views/booking-form.html.php:22 views/booking.html.php:20
 msgid "Male(s)"
 msgstr ""
 
-#: views/booking-form.html.php:22 views/booking.html.php:21
+#: views/booking-form.html.php:23 views/booking.html.php:21
 msgid "Female(s)"
 msgstr ""
 
-#: views/booking-form.html.php:23 views/booking.html.php:22
+#: views/booking-form.html.php:24 views/booking.html.php:22
 msgid "Couple"
 msgstr ""
 
-#: views/booking-form.html.php:24 views/booking.html.php:23
+#: views/booking-form.html.php:25 views/booking.html.php:23
 msgid "Mixed"
 msgstr ""
 
-#: views/booking-form.html.php:28
+#: views/booking-form.html.php:29
 msgid "Make Reservation"
 msgstr ""
 
@@ -411,44 +411,52 @@ msgstr ""
 msgid "Your Paypal Email:"
 msgstr ""
 
-#: views/options.php:34
+#: views/options.php:32
+msgid "Automatically cleanup unconfirmed (unpaid) bookings after"
+msgstr ""
+
+#: views/options.php:32
+msgid "hours. (Leave blank for no automated cleanup.)"
+msgstr ""
+
+#: views/options.php:35
 msgid ""
 "Send me email with booking details when someone makes or requests a booking"
 msgstr ""
 
-#: views/options.php:37
+#: views/options.php:38
 msgid "Email address to receive the notice:"
 msgstr ""
 
-#: views/options.php:38 views/options.php:47
+#: views/options.php:39 views/options.php:48
 msgid "Email subject:"
 msgstr ""
 
-#: views/options.php:39 views/options.php:48
+#: views/options.php:40 views/options.php:49
 msgid "Email message:"
 msgstr ""
 
-#: views/options.php:40 views/options.php:49
+#: views/options.php:41 views/options.php:50
 msgid "You can use the following variables:"
 msgstr ""
 
-#: views/options.php:40
+#: views/options.php:41
 msgid "(The URL to see the booking details in admin)"
 msgstr ""
 
-#: views/options.php:40 views/options.php:50
+#: views/options.php:41 views/options.php:51
 msgid "(Date/time when reservation is made)"
 msgstr ""
 
-#: views/options.php:43
+#: views/options.php:44
 msgid "Send confirmation email to user when booking is made"
 msgstr ""
 
-#: views/options.php:53
+#: views/options.php:54
 msgid "Save Options"
 msgstr ""
 
-#: views/options.php:58
+#: views/options.php:59
 msgid ""
 "Your feedback is most welcome! Please <a href=\"%s\" target=\"_blank\">let "
 "us know</a> what features and improvements you would like to see in the "

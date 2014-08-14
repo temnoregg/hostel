@@ -84,8 +84,9 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.8.2 =
+= Version 0.8.3 =
 - Changed the booking form design to avoid styling issues
+- Added setting to auto-cleanup unconfirmed/unpaid bookings after given interval of time
 
 = Version 0.8 = 
 - Reworked all forms to work only with Ajax. This will let you use multiple 

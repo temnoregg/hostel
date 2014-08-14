@@ -146,6 +146,16 @@ class WPHostel {
 		add_filter('query_vars', array(__CLASS__, "query_vars"));
 		add_action('parse_request', array("WPHostelPayment", "parse_request"));
 		
+		// cleanup unconfirmed bookings
+		if(get_option('wphostel_booking_mode') == 'paypal') {
+			$cleanup_hours = get_option('wphostel_cleanup_hours');
+			if(!empty($cleanup_hours) and is_numeric($cleanup_hours)) {
+				 $wpdb->query("DELETE FROM ".WPHOSTEL_BOOKINGS." WHERE
+				 	timestamp < NOW() - INTERVAL $cleanup_hours HOUR	
+				 	AND amount_paid = 0 AND status != 'active'");
+			}
+		}
+		
 		$old_version = get_option('wphostel_version');
 		if(empty($old_version) or $old_version < 0.72) self :: install(true);
 		update_option('wphostel_version', '0.72');
@@ -181,6 +191,7 @@ class WPHostel {
 				"email_admin_subject"=>$_POST['email_admin_subject'], "email_admin_message"=>$_POST['email_admin_message'],
 				"email_user_subject"=>$_POST['email_user_subject'], "email_user_message"=>$_POST['email_user_message']));
 			update_option('wphostel_paypal', $_POST['paypal']);
+			update_option('wphostel_cleanup_hours', $_POST['cleanup_hours']);
 			// update_option('wphostel_booking_url', $_POST['booking_url']);		
 		}		
 		
@@ -194,6 +205,7 @@ class WPHostel {
 		$booking_mode = get_option('wphostel_booking_mode');   
 		$email_options = get_option('wphostel_email_options');
 		$paypal = get_option('wphostel_paypal');
+		$cleanup_hours = get_option('wphostel_cleanup_hours');
 		   	
 		require(WPHOSTEL_PATH."/views/options.php");
 	}	

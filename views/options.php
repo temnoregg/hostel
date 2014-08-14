@@ -29,6 +29,7 @@
 					
 			<div id="wphostelPaypal" style="display:<?php echo ($booking_mode=='paypal')?'block':'none'?>">
 				<label><?php _e('Your Paypal Email:', 'wphostel')?></label> <input type="text" name="paypal" value="<?php echo @$paypal?>">
+				<p><?php _e('Automatically cleanup unconfirmed (unpaid) bookings after', 'wphostel')?> <input type="text" name="cleanup_hours" value="<?php echo $cleanup_hours?>" size="4"> <?php _e('hours. (Leave blank for no automated cleanup.)', 'wphostel')?> </p>
 			</div>
 			
 				<div><input type="checkbox" name="do_email_admin" value="1" <?php if(!empty($email_options['do_email_admin'])) echo 'checked'?> onclick="jQuery('#emailAdminOptions').toggle();"> <?php _e('Send me email with booking details when someone makes or requests a booking','wphostel')?> </div>
