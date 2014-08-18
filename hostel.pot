@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Hostel package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hostel 0.8.3\n"
+"Project-Id-Version: Hostel 0.8.4\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/hostel\n"
-"POT-Creation-Date: 2014-08-14 14:29:56+00:00\n"
+"POT-Creation-Date: 2014-08-18 09:51:11+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,17 +16,21 @@ msgstr ""
 msgid "Online booking is not enabled."
 msgstr ""
 
-#: controllers/bookings.php:167
+#: controllers/bookings.php:168
+msgid "Minimum stay of %d days is required."
+msgstr ""
+
+#: controllers/bookings.php:173
 msgid "This is a private room. You have to book all the %d beds"
 msgstr ""
 
-#: controllers/bookings.php:176
+#: controllers/bookings.php:182
 msgid ""
 "In your selection there are dates when the room is not available or there "
 "are not enough free beds. Please check your selection."
 msgstr ""
 
-#: controllers/bookings.php:187
+#: controllers/bookings.php:193
 msgid ""
 "Thank you for your reservation request. We will get back to you when it is "
 "confirmed"
@@ -44,12 +48,12 @@ msgstr ""
 msgid "Room deleted."
 msgstr ""
 
-#: controllers/shortcodes.php:62 views/partial/rooms-table.html.php:7
+#: controllers/shortcodes.php:64 views/partial/rooms-table.html.php:7
 #: views/partial/rooms-table.html.php:26
 msgid "Book"
 msgstr ""
 
-#. #-#-#-#-#  hostel.pot (Hostel 0.8.3)  #-#-#-#-#
+#. #-#-#-#-#  hostel.pot (Hostel 0.8.4)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: models/hostel.php:75
 msgid "Hostel"
@@ -360,6 +364,10 @@ msgstr ""
 msgid "Please select up to 5 days interval."
 msgstr ""
 
+#: views/list-rooms.html.php:27
+msgid "Minimum stay of %d days is required"
+msgstr ""
+
 #: views/options.php:2
 msgid "Hostel Options"
 msgstr ""
@@ -419,44 +427,52 @@ msgstr ""
 msgid "hours. (Leave blank for no automated cleanup.)"
 msgstr ""
 
-#: views/options.php:35
+#: views/options.php:36
+msgid "Require minimum stay of:"
+msgstr ""
+
+#: views/options.php:36
+msgid "days"
+msgstr ""
+
+#: views/options.php:39
 msgid ""
 "Send me email with booking details when someone makes or requests a booking"
 msgstr ""
 
-#: views/options.php:38
+#: views/options.php:42
 msgid "Email address to receive the notice:"
 msgstr ""
 
-#: views/options.php:39 views/options.php:48
+#: views/options.php:43 views/options.php:52
 msgid "Email subject:"
 msgstr ""
 
-#: views/options.php:40 views/options.php:49
+#: views/options.php:44 views/options.php:53
 msgid "Email message:"
 msgstr ""
 
-#: views/options.php:41 views/options.php:50
+#: views/options.php:45 views/options.php:54
 msgid "You can use the following variables:"
 msgstr ""
 
-#: views/options.php:41
+#: views/options.php:45
 msgid "(The URL to see the booking details in admin)"
 msgstr ""
 
-#: views/options.php:41 views/options.php:51
+#: views/options.php:45 views/options.php:55
 msgid "(Date/time when reservation is made)"
 msgstr ""
 
-#: views/options.php:44
+#: views/options.php:48
 msgid "Send confirmation email to user when booking is made"
 msgstr ""
 
-#: views/options.php:54
+#: views/options.php:58
 msgid "Save Options"
 msgstr ""
 
-#: views/options.php:59
+#: views/options.php:63
 msgid ""
 "Your feedback is most welcome! Please <a href=\"%s\" target=\"_blank\">let "
 "us know</a> what features and improvements you would like to see in the "

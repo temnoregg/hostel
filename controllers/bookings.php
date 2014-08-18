@@ -162,6 +162,12 @@ class WPHostelBookings {
 			$_POST['status'] = 'pending';
 										
 			if(empty($bid)) {
+				// minimum stay required?
+				$min_stay = get_option('wphostel_min_stay');
+				if(!empty($min_stay) and $min_stay > $numdays) {
+					return '<!--BOOKERROR-->'.sprintf(__('Minimum stay of %d days is required.', 'wphostel'), $min_stay);
+				}						
+				
 				// if this is a private room, we cannot book less beds than the room has
 				if($room->rtype == 'private' and $_POST['beds'] != $room->beds and $room->price_type != 'per-room') {
 					return '<!--BOOKERROR-->'.sprintf(__('This is a private room. You have to book all the %d beds', 'wphostel'), $room->beds);

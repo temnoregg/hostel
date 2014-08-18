@@ -21,6 +21,13 @@ function validateHostelForm(frm) {
 		 alert("<?php _e('Please select up to 5 days interval.', 'wphostel')?>");
 		 return false;
 	}
+	
+	<?php if(!empty($min_stay)):?>
+	if(daydiff < <?php echo intval($min_stay)?>) {
+		alert("<?php printf(__('Minimum stay of %d days is required', 'wphostel'), $min_stay);?>");
+		return false;
+	}
+	<?php endif;?>
 
 	data = {'action': 'wphostel_ajax', 'type': 'list_rooms', 'wphostel_from' : frm.wphostel_from.value, 
 		'wphostel_to' : frm.wphostel_to.value, 'shortcode_id' : '<?php echo $shortcode_id?>'};

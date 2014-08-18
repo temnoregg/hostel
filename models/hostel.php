@@ -193,6 +193,7 @@ class WPHostel {
 			update_option('wphostel_paypal', $_POST['paypal']);
 			update_option('wphostel_cleanup_hours', $_POST['cleanup_hours']);
 			// update_option('wphostel_booking_url', $_POST['booking_url']);		
+			update_option('wphostel_min_stay', $_POST['min_stay']);
 		}		
 		
 		$currency = get_option('wphostel_currency');
@@ -206,6 +207,7 @@ class WPHostel {
 		$email_options = get_option('wphostel_email_options');
 		$paypal = get_option('wphostel_paypal');
 		$cleanup_hours = get_option('wphostel_cleanup_hours');
+		$min_stay = get_option('wphostel_min_stay');
 		   	
 		require(WPHOSTEL_PATH."/views/options.php");
 	}	

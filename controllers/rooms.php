@@ -70,10 +70,12 @@ class WPHostelRooms {
 		$_booking = new WPHostelBooking();
 		$dateformat = get_option('date_format');
 		$booking_mode = get_option('wphostel_booking_mode');
+		$min_stay = get_option('wphostel_min_stay');
 				
 		// the dropdown defaults to "from tomorrow to 1 day after"
+		$default_dateto_diff = $min_stay ? strtotime("+ ".(intval($min_stay)+1)." days") : strtotime("+ 2 days");
 		$datefrom = empty($_POST['wphostel_from']) ? date("Y-m-d", strtotime("tomorrow")) : $_POST['wphostel_from'];
-		$dateto = empty($_POST['wphostel_to']) ? date("Y-m-d", strtotime("+ 2 days")) : $_POST['wphostel_to'];
+		$dateto = empty($_POST['wphostel_to']) ? date("Y-m-d", $default_dateto_diff) : $_POST['wphostel_to'];
 		
 		// select all rooms
 		$rooms = $wpdb->get_results("SELECT * FROM ".WPHOSTEL_ROOMS." ORDER BY price", ARRAY_A);

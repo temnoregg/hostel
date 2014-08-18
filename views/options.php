@@ -32,6 +32,10 @@
 				<p><?php _e('Automatically cleanup unconfirmed (unpaid) bookings after', 'wphostel')?> <input type="text" name="cleanup_hours" value="<?php echo $cleanup_hours?>" size="4"> <?php _e('hours. (Leave blank for no automated cleanup.)', 'wphostel')?> </p>
 			</div>
 			
+			<div id="wphostelMinStay" style="display:<?php echo ($booking_mode!='none')?'block':'none'?>">
+				<p><label><?php _e('Require minimum stay of:', 'wphostel')?></label> <input type="text" name="min_stay" value="<?php echo $min_stay?>" size="3"> <?php _e('days', 'wphostel');?></p>				
+			</div>
+			
 				<div><input type="checkbox" name="do_email_admin" value="1" <?php if(!empty($email_options['do_email_admin'])) echo 'checked'?> onclick="jQuery('#emailAdminOptions').toggle();"> <?php _e('Send me email with booking details when someone makes or requests a booking','wphostel')?> </div>
 			
 			<div id="emailAdminOptions" style="display:<?php echo empty($email_options['do_email_admin'])? 'none' : 'block'?>;margin-left:100px;">
@@ -61,7 +65,9 @@
 
 <script type="text/javascript" >
 function changeBookingMode(val) {
+	jQuery('#wphostelPaypal').hide();
+	jQuery('#wphostelMinStay').hide();
 	if(val=='paypal') jQuery('#wphostelPaypal').show();
-	else jQuery('#wphostelPaypal').hide();
+	if(val=='paypal' || val == 'manual') jQuery('#wphostelMinStay').show();
 }
 </script>
