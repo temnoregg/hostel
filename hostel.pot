@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Hostel package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hostel 0.8.4\n"
+"Project-Id-Version: Hostel 0.8.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/hostel\n"
-"POT-Creation-Date: 2014-08-18 09:51:11+00:00\n"
+"POT-Creation-Date: 2014-09-09 09:43:01+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,53 +53,57 @@ msgstr ""
 msgid "Book"
 msgstr ""
 
-#. #-#-#-#-#  hostel.pot (Hostel 0.8.4)  #-#-#-#-#
+#. #-#-#-#-#  hostel.pot (Hostel 0.8.5)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: models/hostel.php:75
 msgid "Hostel"
 msgstr ""
 
-#: models/hostel.php:77 views/rooms.php:1
+#: models/hostel.php:77
+msgid "Settings"
+msgstr ""
+
+#: models/hostel.php:79 views/rooms.php:1
 msgid "Manage Rooms"
 msgstr ""
 
-#: models/hostel.php:78
+#: models/hostel.php:80
 msgid "Manage Bookings"
 msgstr ""
 
-#: models/hostel.php:79
+#: models/hostel.php:81
 msgid "Unavailable Dates"
 msgstr ""
 
-#: models/hostel.php:80
+#: models/hostel.php:82
 msgid "Help"
 msgstr ""
 
-#: models/hostel.php:103
+#: models/hostel.php:105
 msgid "Please enter name!"
 msgstr ""
 
-#: models/hostel.php:104
+#: models/hostel.php:106
 msgid "Please enter email address!"
 msgstr ""
 
-#: models/hostel.php:105
+#: models/hostel.php:107
 msgid "Please enter number of beds, numbers only"
 msgstr ""
 
-#: models/hostel.php:106
+#: models/hostel.php:108
 msgid "Please enter arrival date"
 msgstr ""
 
-#: models/hostel.php:107
+#: models/hostel.php:109
 msgid "Please enter date of leaving"
 msgstr ""
 
-#: models/hostel.php:108
+#: models/hostel.php:110
 msgid "Date of arrival cannot be in the past"
 msgstr ""
 
-#: models/hostel.php:109
+#: models/hostel.php:111
 msgid "Date of arrival cannot be after date of leave"
 msgstr ""
 
@@ -317,7 +321,7 @@ msgstr ""
 msgid "Hostel for WordPress"
 msgstr ""
 
-#: views/help.html.php:4 views/options.php:4
+#: views/help.html.php:4 views/options.php:3
 msgid ""
 "This plugin is a light version of <a href=\"%s\" target=\"_blank\">Hostel "
 "PRO</a>"
@@ -372,107 +376,107 @@ msgstr ""
 msgid "Hostel Options"
 msgstr ""
 
-#: views/options.php:8
+#: views/options.php:9
 msgid "Currency:"
 msgstr ""
 
-#: views/options.php:15
+#: views/options.php:16
 msgid "Custom"
 msgstr ""
 
-#: views/options.php:17
+#: views/options.php:18
 msgid "Booking mode:"
 msgstr ""
 
-#: views/options.php:18 views/options.php:23
+#: views/options.php:19 views/options.php:24
 msgid "No booking"
 msgstr ""
 
-#: views/options.php:19 views/options.php:25
+#: views/options.php:20 views/options.php:26
 msgid "Manual / No Payment"
 msgstr ""
 
-#: views/options.php:20 views/options.php:26
+#: views/options.php:21 views/options.php:27
 msgid "Paypal"
 msgstr ""
 
-#: views/options.php:23
+#: views/options.php:24
 msgid ""
 "- In this mode your site will only show the information for the rooms and "
 "will not let the visitors book rooms"
 msgstr ""
 
-#: views/options.php:25
+#: views/options.php:26
 msgid ""
 "- In this mode your visitors will be able to request booking by clicking on "
 "button and filling their information in the booking form. You as admin will "
 "approve or reject the booking manually in the admin panel."
 msgstr ""
 
-#: views/options.php:26
+#: views/options.php:27
 msgid ""
 "- In this mode your visitors will be able to book and get their bookings "
 "activated instantly by paying by Paypal"
 msgstr ""
 
-#: views/options.php:31
+#: views/options.php:32
 msgid "Your Paypal Email:"
 msgstr ""
 
-#: views/options.php:32
+#: views/options.php:33
 msgid "Automatically cleanup unconfirmed (unpaid) bookings after"
 msgstr ""
 
-#: views/options.php:32
+#: views/options.php:33
 msgid "hours. (Leave blank for no automated cleanup.)"
 msgstr ""
 
-#: views/options.php:36
+#: views/options.php:37
 msgid "Require minimum stay of:"
 msgstr ""
 
-#: views/options.php:36
+#: views/options.php:37
 msgid "days"
 msgstr ""
 
-#: views/options.php:39
+#: views/options.php:40
 msgid ""
 "Send me email with booking details when someone makes or requests a booking"
 msgstr ""
 
-#: views/options.php:42
+#: views/options.php:43
 msgid "Email address to receive the notice:"
 msgstr ""
 
-#: views/options.php:43 views/options.php:52
+#: views/options.php:44 views/options.php:53
 msgid "Email subject:"
 msgstr ""
 
-#: views/options.php:44 views/options.php:53
+#: views/options.php:45 views/options.php:54
 msgid "Email message:"
 msgstr ""
 
-#: views/options.php:45 views/options.php:54
+#: views/options.php:46 views/options.php:55
 msgid "You can use the following variables:"
 msgstr ""
 
-#: views/options.php:45
+#: views/options.php:46
 msgid "(The URL to see the booking details in admin)"
 msgstr ""
 
-#: views/options.php:45 views/options.php:55
+#: views/options.php:46 views/options.php:56
 msgid "(Date/time when reservation is made)"
 msgstr ""
 
-#: views/options.php:48
+#: views/options.php:49
 msgid "Send confirmation email to user when booking is made"
 msgstr ""
 
-#: views/options.php:58
+#: views/options.php:59
 msgid "Save Options"
 msgstr ""
 
-#: views/options.php:63
+#: views/options.php:64
 msgid ""
 "Your feedback is most welcome! Please <a href=\"%s\" target=\"_blank\">let "
 "us know</a> what features and improvements you would like to see in the "
@@ -588,6 +592,116 @@ msgid ""
 "generated. Use it on a page where you have manually described your room with "
 "pictures etc. You can pass custom button text as second argument to the "
 "shortcode - like this:"
+msgstr ""
+
+#: views/sidebar.html.php:21
+msgid "Go PRO!"
+msgstr ""
+
+#: views/sidebar.html.php:23
+msgid "Get more powerful features by"
+msgstr ""
+
+#: views/sidebar.html.php:23
+msgid "upgrading to the PRO version:"
+msgstr ""
+
+#: views/sidebar.html.php:26
+msgid "Premium support"
+msgstr ""
+
+#: views/sidebar.html.php:26
+msgid "Free email support for 1 year after purchase"
+msgstr ""
+
+#: views/sidebar.html.php:27
+msgid "Advanced shortcodes"
+msgstr ""
+
+#: views/sidebar.html.php:28
+msgid "Booking availability calendars"
+msgstr ""
+
+#: views/sidebar.html.php:29
+msgid "Discounts and surcharges"
+msgstr ""
+
+#: views/sidebar.html.php:30
+msgid "Reports and charts"
+msgstr ""
+
+#: views/sidebar.html.php:31
+msgid "Customizable form code"
+msgstr ""
+
+#: views/sidebar.html.php:32
+msgid "And a lot more - just come to see!"
+msgstr ""
+
+#: views/sidebar.html.php:35
+msgid "Just go ahead and"
+msgstr ""
+
+#: views/sidebar.html.php:35
+msgid "take the tour"
+msgstr ""
+
+#: views/sidebar.html.php:35
+msgid "or check the"
+msgstr ""
+
+#: views/sidebar.html.php:35
+msgid "online demo."
+msgstr ""
+
+#: views/sidebar.html.php:37
+msgid ""
+"Upgrading to PRO comes with 60 days refund policy, one year free upgrades "
+"and one year free support."
+msgstr ""
+
+#: views/sidebar.html.php:41
+msgid "Help To Spread The Word!"
+msgstr ""
+
+#: views/sidebar.html.php:43
+msgid "If you like this plugin you can do some of the following:"
+msgstr ""
+
+#: views/sidebar.html.php:46
+msgid "Rate it 5 starts at Wordpress.org"
+msgstr ""
+
+#: views/sidebar.html.php:47
+msgid "Let others know about it by blogging or posting"
+msgstr ""
+
+#: views/sidebar.html.php:47
+msgid "our home page"
+msgstr ""
+
+#: views/sidebar.html.php:47
+msgid "on social networks."
+msgstr ""
+
+#: views/sidebar.html.php:48
+msgid "Go PRO"
+msgstr ""
+
+#: views/sidebar.html.php:48
+msgid "to empower your site with extra benefits"
+msgstr ""
+
+#: views/sidebar.html.php:53
+msgid "Need Support?"
+msgstr ""
+
+#: views/sidebar.html.php:55
+msgid "Please ask your question in the"
+msgstr ""
+
+#: views/sidebar.html.php:55
+msgid "support forum at WordPress."
 msgstr ""
 
 #: views/unavailable-dates.html.php:2

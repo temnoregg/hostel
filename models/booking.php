@@ -119,11 +119,12 @@ class WPHostelBooking {
 			$message = str_replace('{{amount-paid}}', $booking->amount_paid, $message);			
 			$message = str_replace('{{amount-due}}', $booking->amount_due, $message);
 			$message = str_replace('{{room-type}}', $_room->prettify("rtype", $room->rtype), $message);
+			$message = str_replace('{{room-name}}', stripslashes($room->title), $message);
 			$message = str_replace('{{timestamp}}', $timestamp, $message);			
 			$message = str_replace('{{num-beds}}', $booking->beds, $message);
 			
 			$headers .= 'From: '. $email_options['admin_email'] . "\r\n";
-			// echo $subject.'-'.$message.'<br>';
+			echo $subject.'-'.$message.'<br>';
 			wp_mail( $booking->contact_email, $subject, $message, $headers );
 		} // end do email user
 	} // end email

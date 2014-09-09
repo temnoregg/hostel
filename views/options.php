@@ -1,7 +1,8 @@
 <div class="wrap">
 	<h1><?php _e("Hostel Options", 'wphostel')?></h1>
-	
 	<p><b><?php printf(__('This plugin is a light version of <a href="%s" target="_blank">Hostel PRO</a>', 'wphostel'), 'http://wp-hostel.com')?></b></p>
+	
+	<div class="postbox-container" style="width:73%;margin-right:2%;">
 	
 	<form method="post" class="wphostel-form">
 		<div class="postbox wphostel-box">
@@ -52,7 +53,7 @@
 					<div><label><?php _e('Email subject:', 'wphostel')?></label> <input type="text" name="email_user_subject" value="<?php echo $email_options['email_user_subject']?>" size="40"></div>
 					<div><label><?php _e('Email message:', 'wphostel')?></label> <?php echo wp_editor(stripslashes(@$email_options['email_user_message']), 'email_user_message')?></div>
 					<p><?php _e('You can use the following variables:', 'wphostel')?> <b>{{from-date}}</b>, <b>{{to-date}}</b>, <b>{{amount-paid}}</b>, 
-					<b>{{amount-due}}</b>, <b>{{room-type}}</b>, <b>{{num-beds}}</b>, <b>{{timestamp}}</b> <?php _e('(Date/time when reservation is made)','wphostel')?></p>
+					<b>{{amount-due}}</b>, <b>{{room-type}}</b>, {{room-name}}, <b>{{num-beds}}</b>, <b>{{timestamp}}</b> <?php _e('(Date/time when reservation is made)','wphostel')?></p>
 			</div>
 			
 			<p><input type="submit" value="<?php _e('Save Options', 'wphostel')?>"></p>
@@ -61,6 +62,11 @@
 	</form>
 	
 		<p><?php printf(__('Your feedback is most welcome! Please <a href="%s" target="_blank">let us know</a> what features and improvements you would like to see in the plugin.', 'wphostel'), 'http://wordpress.org/support/plugin/hostel')?></p>
+	</div>
+	
+	<div id="wphsotel-sidebar">
+				<?php require(WPHOSTEL_PATH."/views/sidebar.html.php");?>
+	</div>	
 </div>	
 
 <script type="text/javascript" >

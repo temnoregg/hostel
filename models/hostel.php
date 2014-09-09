@@ -72,7 +72,9 @@ class WPHostel {
    
    // main menu
    static function menu() {
-   	$menu=add_menu_page(__('Hostel', 'wphostel'), __('Hostel', 'wphostel'), "manage_options", "wphostel_options", 
+   	add_menu_page(__('Hostel', 'wphostel'), __('Hostel', 'wphostel'), "manage_options", "wphostel_options", 
+   		array(__CLASS__, "options"));
+   	add_submenu_page('wphostel_options', __('Settings', 'wphostel'), __('Settings', 'wphostel'), "manage_options", "wphostel_options", 
    		array(__CLASS__, "options"));
 		add_submenu_page('wphostel_options', __("Manage Rooms", 'wphostel'), __("Manage Rooms", 'wphostel'), 'manage_options', 'wphostel_rooms', array('WPHostelRooms', "manage"));
 		add_submenu_page('wphostel_options', __("Manage Bookings", 'wphostel'), __("Manage Bookings", 'wphostel'), 'manage_options', 'wphostel_bookings', array('WPHostelBookings', "manage")); 

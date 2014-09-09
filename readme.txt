@@ -2,7 +2,7 @@
 Contributors: prasunsen
 Tags: hostel, hotel, booking, bnb, rooms, wpmu, touch
 Requires at least: 3.3
-Tested up to: 3.9.1
+Tested up to: 4.0
 Stable tag: trunk
 License: GPL2
 
@@ -84,10 +84,11 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.8.4 =
+= Version 0.8.5 =
 - Changed the booking form design to avoid styling issues
 - Added setting to auto-cleanup unconfirmed/unpaid bookings after given interval of time
 - Added setting for required minimum stay (X days)
+- Added {{room-name}} variable for the email contents
 
 = Version 0.8 = 
 - Reworked all forms to work only with Ajax. This will let you use multiple 
