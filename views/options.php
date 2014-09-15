@@ -43,7 +43,7 @@
 					<div><label><?php _e('Email address to receive the notice:', 'wphostel')?></label> <input type="text" name="admin_email" value="<?php echo empty($email_options['admin_email']) ? get_option('admin_email') : $email_options['admin_email']?>"></div>		
 					<div><label><?php _e('Email subject:', 'wphostel')?></label> <input type="text" name="email_admin_subject" value="<?php echo $email_options['email_admin_subject']?>" size="40"></div>
 					<div><label><?php _e('Email message:', 'wphostel')?></label> <?php echo wp_editor(stripslashes(@$email_options['email_admin_message']), 'email_admin_message')?></div>
-					<p><?php _e('You can use the following variables:', 'wphostel')?> <b>{{from-date}}</b>, <b>{{to-date}}</b>, <b>{{url}}</b> <?php _e('(The URL to see the booking details in admin)','wphostel')?>, <b>{{contact-name}}</b>, <b>{{contact-email}}</b>, <b>{{contact-phone}}</b>, <b>{{timestamp}}</b> <?php _e('(Date/time when reservation is made)','wphostel')?></p>
+					<p><?php _e('You can use the following variables:', 'wphostel')?> <b>{{from-date}}</b>, <b>{{to-date}}</b>, <b>{{url}}</b> <?php _e('(The URL to see the booking details in admin)','wphostel')?>, <b>{{room-type}}</b>, <b>{{room-name}}</b>, <b>{{num-beds}}</b>, <b>{{contact-name}}</b>, <b>{{contact-email}}</b>, <b>{{contact-phone}}</b>, <b>{{timestamp}}</b> <?php _e('(Date/time when reservation is made)','wphostel')?></p>
 			</div>
 			
 			<div><input type="checkbox" name="do_email_user" value="1" <?php if(!empty($email_options['do_email_user'])) echo 'checked'?> onclick="jQuery('#emailUserOptions').toggle();"> <?php _e('Send confirmation email to user when booking is made','wphostel')?> </div>
@@ -53,7 +53,7 @@
 					<div><label><?php _e('Email subject:', 'wphostel')?></label> <input type="text" name="email_user_subject" value="<?php echo $email_options['email_user_subject']?>" size="40"></div>
 					<div><label><?php _e('Email message:', 'wphostel')?></label> <?php echo wp_editor(stripslashes(@$email_options['email_user_message']), 'email_user_message')?></div>
 					<p><?php _e('You can use the following variables:', 'wphostel')?> <b>{{from-date}}</b>, <b>{{to-date}}</b>, <b>{{amount-paid}}</b>, 
-					<b>{{amount-due}}</b>, <b>{{room-type}}</b>, {{room-name}}, <b>{{num-beds}}</b>, <b>{{timestamp}}</b> <?php _e('(Date/time when reservation is made)','wphostel')?></p>
+					<b>{{amount-due}}</b>, <b>{{room-type}}</b>, <b>{{room-name}}</b>, <b>{{num-beds}}</b>, <b>{{timestamp}}</b> <?php _e('(Date/time when reservation is made)','wphostel')?></p>
 			</div>
 			
 			<p><input type="submit" value="<?php _e('Save Options', 'wphostel')?>"></p>
