@@ -2,7 +2,7 @@
 
 <div class="wrap wphostel-box postbox">
 	<form class='wphostel-form' onsubmit="return validateWPHostelForm(this);" method="post">
-		<div><label><?php _e('Room title*', 'wphostel')?></label> <input type="text" name="title" value="<?php echo @$room->title?>" size="40">
+		<div><label><?php _e('Room title*', 'wphostel')?></label> <input type="text" name="title" value="<?php echo stripslashes(@$room->title)?>" size="40">
 		<div class="wphostel-help"><?php _e('For management purposes', 'wphostel')?></div></div>	
 		<div><label><?php _e('Room type', 'wphostel')?></label> <select name="rtype">
 			<option value="private" <?php if(!empty($room->rtype) and $room->rtype=='private') echo 'selected'?>><?php _e('Private', 'wphostel')?></option>		
@@ -17,7 +17,7 @@
 			<input type="radio" name="price_type" value="per-bed" <?php if(empty($room->price_type) or $room->price_type == 'per-bed') echo 'checked'?>> <?php _e('Per person per night', 'wphostel')?>
 			<input type="radio" name="price_type" value="per-room" <?php if(!empty($room->price_type) and $room->price_type == 'per-room') echo 'checked'?>> <?php _e('Per night for the whole room', 'wphostel')?>
 		</div>
-		<div><label><?php _e('Room description (optional):', 'wphostel')?></label> <?php wp_editor(@$room->description, 'description')?></div>
+		<div><label><?php _e('Room description (optional):', 'wphostel')?></label> <?php wp_editor(stripslashes(@$room->description), 'description')?></div>
 		<div><input type="submit" value="<?php _e('Save room details', 'wphostel')?>"></div>
 		<input type="hidden" name="ok" value="1">
 	</form>

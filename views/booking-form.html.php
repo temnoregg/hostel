@@ -7,7 +7,7 @@
 			<p><label><?php _e('Select room:', 'wphostel')?></label> <br />
 			<select name="room_id" onchange="WPHostelChangeRoom(this.value, this.form);">
 				<?php foreach($rooms as $room):?>
-					<option value="<?php echo $room->id?>" <?php if(!empty($_GET['room_id']) and $_GET['room_id'] == $room->id) echo 'selected'?>><?php echo $room->title;?></option>
+					<option value="<?php echo $room->id?>" <?php if(!empty($_GET['room_id']) and $_GET['room_id'] == $room->id) echo 'selected'?>><?php echo stripslashes($room->title);?></option>
 				<?php endforeach;?>
 			</select></p>
 			
