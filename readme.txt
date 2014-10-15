@@ -40,7 +40,7 @@ There are more and better features + premium support in the PRO version. Check i
 
 ###Shortcodes###
 
-- [wphostel-list] will display a table with your available rooms. A date selector on the top lets the user choose dates of their visit and then the rooms list is updated. If you have enabled booking in your Hostel settings page, the table will also show "Book" button when appropriate. The button will automaically load the booking form.
+- [wphostel-list] will display a table with your available rooms. A date selector on the top lets the user choose dates of their visit and then the rooms list is updated. If you have enabled booking in your Hostel settings page, the table will also show "Book" button when appropriate. The button will automaically load the booking form. You can pass the attribute "max_days" to specify the maximum day interval that can be selected to show the table.
 
 - [wphostel-booking] displays a generic booking form with a drop-down selector for choosing room, and a date selector. If you use the [wphostel-list] shortcode you most probably do not need this one because the booking form is automatically generated.
 
@@ -84,11 +84,12 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.8.5 =
+= Version 0.8.7 =
 - Changed the booking form design to avoid styling issues
 - Added setting to auto-cleanup unconfirmed/unpaid bookings after given interval of time
 - Added setting for required minimum stay (X days)
 - Added {{room-name}} variable for the email contents
+- Added "max_days" attribute for the [wphostel-list] shortcode
 
 = Version 0.8 = 
 - Reworked all forms to work only with Ajax. This will let you use multiple 

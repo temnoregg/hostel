@@ -12,8 +12,8 @@
 			</select></p>
 			
 			<p><label><?php _e('No. beds to book:', 'wphostel')?></label> <br /><input type="text" name="beds" value="<?php echo empty($booking->beds) ? 1 : $booking->beds?>" size="4"></p>
-			<p><label><?php _e('From date:', 'wphostel')?></label> <br /><input type="text" size="10" name="from_date" value="<?php echo $from_date?>" class="wphostelDatePicker"></p>
-			<p><label><?php _e('To date:', 'wphostel')?></label> <br /><input type="text" size="10" name="to_date" value="<?php echo $to_date?>" class="wphostelDatePicker"></p>
+			<p><label><?php _e('Arriving:', 'wphostel')?></label> <br /><input type="text" size="10" name="from_date" value="<?php echo $from_date?>" class="wphostelDatePicker"></p>
+			<p><label><?php _e('Leaving:', 'wphostel')?></label> <br /><input type="text" size="10" name="to_date" value="<?php echo $to_date?>" class="wphostelDatePicker"></p>
 			
 			<p><label><?php _e('Contact name:', 'wphostel')?></label> <br /><input type="text" name="contact_name" value="<?php echo empty($booking->contact_name) ? '' : $booking->contact_name?>"></p>
 			<p><label><?php _e('Contact email:', 'wphostel')?></label> <br /><input type="text" name="contact_email" value="<?php echo empty($booking->contact_email) ? '' : $booking->contact_email?>"></p>

@@ -29,7 +29,7 @@ class WPHostelShortcodes {
 	
 	// list all rooms along with availability dropdown
 	// will show cells for every date selected
-	static function list_rooms() {
+	static function list_rooms($atts) {
 		global $wpdb, $post;
 		$shortcode_id = self :: get_id();	
 		
@@ -37,6 +37,7 @@ class WPHostelShortcodes {
 		$booking_mode = get_option('wphostel_booking_mode');
 		$min_stay = get_option('wphostel_min_stay');
 		$default_dateto_diff = $min_stay ? strtotime("+ ".(intval($min_stay)+1)." days") : strtotime("+ 2 days");
+		$max_days = empty($atts['max_days']) ? 5 : intval($atts['max_days']);
 				
 		// the dropdown defaults to "from tomorrow to 1 day after"
 		$datefrom = empty($_POST['wphostel_from']) ? date("Y-m-d", strtotime("tomorrow")) : $_POST['wphostel_from'];

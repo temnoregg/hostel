@@ -1,6 +1,6 @@
 <form method="post">
-	<p><?php _e('From date:', 'wphostel')?> <input type="text" name="wphostel_from" value="<?php echo $datefrom?>" class="wphostelDatePicker"></p>
-	<p><?php _e('To date:', 'wphostel')?> <input type="text" name="wphostel_to" value="<?php echo $dateto?>" class="wphostelDatePicker"></p>
+	<p><?php _e('Arriving:', 'wphostel')?> <input type="text" name="wphostel_from" value="<?php echo $datefrom?>" class="wphostelDatePicker"></p>
+	<p><?php _e('Leaving:', 'wphostel')?> <input type="text" name="wphostel_to" value="<?php echo $dateto?>" class="wphostelDatePicker"></p>
 	<p><input type="button" value="<?php _e('Show availability', 'wphostel')?>" onclick="validateHostelForm(this.form);"></p>
 </form>
 
@@ -17,8 +17,8 @@ function validateHostelForm(frm) {
 	
 	daydiff = (endDate - startDate) / (1000*60*60*24);
 	
-	if(daydiff > 5) {
-		 alert("<?php _e('Please select up to 5 days interval.', 'wphostel')?>");
+	if(daydiff > <?php echo $max_days?>) {
+		 alert("<?php printf(__('Please select up to %d days interval.', 'wphostel'), $max_days)?>");
 		 return false;
 	}
 	
