@@ -88,6 +88,11 @@ class WPHostelBooking {
 		$to_date = date(get_option('date_format'), strtotime($booking->to_date));
 		$timestamp = date(get_option('date_format').' '.get_option('time_format'), strtotime($booking->timestamp));
 		
+		$_room = new WPHostelRoom();
+
+		// select room
+		$room = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WPHOSTEL_ROOMS." WHERE id=%d", $booking->room_id));
+    
 		if($email_options['do_email_admin']) {
 			$subject = $email_options["email_admin_subject"];
 			$message = $email_options["email_admin_message"];
@@ -109,11 +114,6 @@ class WPHostelBooking {
 		} // end do email admin
 		
 		if($email_options['do_email_user']) {	
-			$_room = new WPHostelRoom();
-
-			// select room
-			$room = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WPHOSTEL_ROOMS." WHERE id=%d", $booking->room_id));			
-			
 			$subject = $email_options["email_user_subject"];
 			$message = $email_options["email_user_message"];
 			
