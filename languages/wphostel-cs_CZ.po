@@ -1,0 +1,765 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Hostel 0.8.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/hostel\n"
+"POT-Creation-Date: 2014-09-09 09:43:01+00:00\n"
+"PO-Revision-Date: Thu Sep 25 2014 23:15:26 GMT+0200 (CEST)\n"
+"Last-Translator: petr <temnoregg@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: Czech\n"
+"Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : "
+"2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../../plugins/hostel\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: cs_CZ\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: controllers/ajax.php:15 controllers/shortcodes.php:11
+msgid "Online booking is not enabled."
+msgstr "Online rezervace není dostupná."
+
+#: controllers/bookings.php:168
+#, c-format
+msgid "Minimum stay of %d days is required."
+msgstr "Minimální délka pobztu je %d dní."
+
+#: controllers/bookings.php:173
+#, c-format
+msgid "This is a private room. You have to book all the %d beds"
+msgstr "Tento pokoje je privátní. Musíte zarezervovat všechny %d lůžka"
+
+#: controllers/bookings.php:182
+msgid ""
+"In your selection there are dates when the room is not available or there "
+"are not enough free beds. Please check your selection."
+msgstr ""
+"Ve vybraný termín není pokoj dostupný nebo není dostatek volných postelí. "
+"Prosím zkontrolujte vybraný termín."
+
+#: controllers/bookings.php:193
+msgid ""
+"Thank you for your reservation request. We will get back to you when it is "
+"confirmed"
+msgstr "Děkujeme za vaši rezervaci. Co nejdříve se ozveme s potvrzením rezervace."
+
+#: controllers/rooms.php:12
+msgid "Room added."
+msgstr "Pokoj přidán."
+
+#: controllers/rooms.php:22
+msgid "Room details saved."
+msgstr "Detaily pokoje byly uloženy."
+
+#: controllers/rooms.php:33
+msgid "Room deleted."
+msgstr "Pokoj byl smazán."
+
+#: controllers/shortcodes.php:64 views/partial/rooms-table.html.php:7
+#: views/partial/rooms-table.html.php:26
+msgid "Book"
+msgstr "Rezervovat"
+
+#. #-#-#-#-#  hostel.pot (Hostel 0.8.5)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: models/hostel.php:75
+msgid "Hostel"
+msgstr "Hostel"
+
+#: models/hostel.php:77
+msgid "Settings"
+msgstr "Nastavení"
+
+#: models/hostel.php:79 views/rooms.php:1
+msgid "Manage Rooms"
+msgstr "Spravovat pokoje"
+
+#: models/hostel.php:80
+msgid "Manage Bookings"
+msgstr "Spravovar rezervace"
+
+#: models/hostel.php:81
+msgid "Unavailable Dates"
+msgstr "Nedostupné dny"
+
+#: models/hostel.php:82
+msgid "Help"
+msgstr "Nápověda"
+
+#: models/hostel.php:105
+msgid "Please enter name!"
+msgstr "Prosím zadejte jméno!"
+
+#: models/hostel.php:106
+msgid "Please enter email address!"
+msgstr "Prosím zadejte e-mailvou adresu!"
+
+#: models/hostel.php:107
+msgid "Please enter number of beds, numbers only"
+msgstr "Prosím zadejte počet lůžek, pouze čísla"
+
+#: models/hostel.php:108
+msgid "Please enter arrival date"
+msgstr "Prosím zadejte datum příjezdu"
+
+#: models/hostel.php:109
+msgid "Please enter date of leaving"
+msgstr "Prosím zadejte datum odjezdu."
+
+#: models/hostel.php:110
+msgid "Date of arrival cannot be in the past"
+msgstr "Datum příjezdu nemůže být v minulosti"
+
+#: models/hostel.php:111
+msgid "Date of arrival cannot be after date of leave"
+msgstr "Datum příjezdu nemúže být až po odjezdu"
+
+#: models/room.php:72 views/room.php:8
+msgid "Private"
+msgstr "Privát"
+
+#: models/room.php:73 views/room.php:9
+msgid "Dorm"
+msgstr "Sdílený"
+
+#: models/room.php:79 views/room.php:13
+msgid "Ensuite"
+msgstr "Se samostatnou koupelnou"
+
+#: models/room.php:80 views/room.php:14
+msgid "Shared"
+msgstr "Se společnou koupelnou"
+
+#: models/room.php:86 views/room.php:17
+msgid "Per person per night"
+msgstr "Osoba/noc"
+
+#: models/room.php:87 views/room.php:18
+msgid "Per night for the whole room"
+msgstr "Za celý pokoj na jednu noc"
+
+#: views/booking-form.html.php:2
+msgid "Back to the listing of rooms"
+msgstr "Zpět k výpisu pokojů"
+
+#: views/booking-form.html.php:7 views/booking.html.php:6
+msgid "Select room:"
+msgstr "Vyberte pokoj:"
+
+#: views/booking-form.html.php:14 views/booking.html.php:11
+msgid "No. beds to book:"
+msgstr "Počet lůžek k rezervaci:"
+
+#: views/booking-form.html.php:15 views/booking.html.php:12
+#: views/list-rooms.html.php:2
+msgid "From date:"
+msgstr "Datum od:"
+
+#: views/booking-form.html.php:16 views/booking.html.php:13
+#: views/list-rooms.html.php:3
+msgid "To date:"
+msgstr "Datum do:"
+
+#: views/booking-form.html.php:18 views/booking.html.php:16
+msgid "Contact name:"
+msgstr "Jméno:"
+
+#: views/booking-form.html.php:19 views/booking.html.php:17
+msgid "Contact email:"
+msgstr "E-mail:"
+
+#: views/booking-form.html.php:20 views/booking.html.php:18
+msgid "Contact phone:"
+msgstr "Telefon:"
+
+#: views/booking-form.html.php:21
+msgid "You are:"
+msgstr "Jste:"
+
+#: views/booking-form.html.php:22 views/booking.html.php:20
+msgid "Male(s)"
+msgstr "Muž(i)"
+
+#: views/booking-form.html.php:23 views/booking.html.php:21
+msgid "Female(s)"
+msgstr "Žena(y)"
+
+#: views/booking-form.html.php:24 views/booking.html.php:22
+msgid "Couple"
+msgstr "Pár"
+
+#: views/booking-form.html.php:25 views/booking.html.php:23
+msgid "Mixed"
+msgstr "Skupina"
+
+#: views/booking-form.html.php:29
+msgid "Make Reservation"
+msgstr "Rezervovat"
+
+#: views/booking.html.php:2
+msgid "Add/Edit Reservation"
+msgstr "Přidat/upravit rezervaci"
+
+#: views/booking.html.php:14
+msgid "Amount paid:"
+msgstr "Zaplacená částka:"
+
+#: views/booking.html.php:15 views/pay-paypal.html.php:2
+msgid "Amount due:"
+msgstr "Dlužná částka:"
+
+#: views/booking.html.php:19
+msgid "Visitors type:"
+msgstr "Typ hostů"
+
+#: views/booking.html.php:26
+msgid "Booking status:"
+msgstr "Stav rezervace:"
+
+#: views/booking.html.php:27 views/bookings.html.php:24
+msgid "Active"
+msgstr "Aktivní"
+
+#: views/booking.html.php:28
+msgid "Pending (not confirmed)"
+msgstr "Čeká se (nepotvrzeno)"
+
+#: views/booking.html.php:29 views/bookings.html.php:26
+msgid "Cancelled"
+msgstr "Zrušeno"
+
+#: views/booking.html.php:34
+msgid "Save Reservation"
+msgstr "Uložit rezervaci"
+
+#: views/booking.html.php:36
+msgid "Delete booking"
+msgstr "Smazat rezervaci"
+
+#: views/booking.html.php:38
+msgid "Go Back"
+msgstr "Zpět"
+
+#: views/booking.html.php:48 views/bookings.html.php:46 views/rooms.php:31
+msgid "Are you sure?"
+msgstr "Jste si jistý(á)?"
+
+#: views/bookings.html.php:2
+msgid "Manage Bookings / Reservations"
+msgstr "Spravovat rezervace"
+
+#: views/bookings.html.php:4
+msgid "Showing"
+msgstr "Zobrazuji"
+
+#: views/bookings.html.php:5
+msgid "Upcoming"
+msgstr "Nadcházející"
+
+#: views/bookings.html.php:6
+msgid "Past"
+msgstr "Uplynulé"
+
+#: views/bookings.html.php:7
+msgid "bookings"
+msgstr "rezervace"
+
+#: views/bookings.html.php:8
+msgid "Click here to manually add a new booking"
+msgstr "Klikněte zde pro manuální přidání nové rezervace"
+
+#: views/bookings.html.php:11
+msgid "There are no bookings to show at the moment."
+msgstr "Momentálně nejsou žádné rezervace k zobrazení."
+
+#: views/bookings.html.php:15
+msgid "Room/beds"
+msgstr "Pokoj/lůžek"
+
+#: views/bookings.html.php:15
+msgid "Contact name"
+msgstr "Kontatkní jméno"
+
+#: views/bookings.html.php:15
+msgid "Contact email"
+msgstr "Kontaktní e-mail"
+
+#: views/bookings.html.php:15
+msgid "Booking dates"
+msgstr "Datum rezervace"
+
+#: views/bookings.html.php:16
+msgid "Amount paid/due"
+msgstr "Částka zaplacená/dluh"
+
+#: views/bookings.html.php:16
+msgid "Status"
+msgstr "Stav"
+
+#: views/bookings.html.php:16 views/rooms.php:14
+msgid "Action"
+msgstr "Akce"
+
+#: views/bookings.html.php:19
+#, c-format
+msgid "%d beds in %s"
+msgstr "%d lůžek v %s"
+
+#: views/bookings.html.php:25
+msgid "Pending"
+msgstr "Čeká se"
+
+#: views/bookings.html.php:28 views/rooms.php:22
+msgid "Edit"
+msgstr "Změnit"
+
+#: views/bookings.html.php:30
+msgid "Mark as paid"
+msgstr "Označit jako zaplacené"
+
+#: views/bookings.html.php:36
+msgid "[previous page]"
+msgstr "[předchozí strana]"
+
+#: views/bookings.html.php:39
+msgid "[next page]"
+msgstr "[další strana]"
+
+#: views/help.html.php:2
+msgid "Hostel for WordPress"
+msgstr "Hostel pro WordPress"
+
+#: views/help.html.php:4 views/options.php:3
+#, c-format
+msgid "This plugin is a light version of <a href=\"%s\" target=\"_blank\">Hostel PRO</a>"
+msgstr "Tento plugin je light verze <a href=\"%s\" target=\"_blank\">Hostel PRO</a>"
+
+#: views/help.html.php:6
+msgid ""
+"This is a plugin for managing hostels, BNB sites, and small hotel sites. You "
+"get an area where to manage your available rooms and prices, and the "
+"bookings made by visitors. Start with the main settings page to set up your "
+"booking mode, currency etc. Then once you enter your property and room "
+"details, you can use the following shortcodes:"
+msgstr ""
+
+#: views/help.html.php:9
+msgid ""
+"will display a table with your available rooms. A date selector on the top "
+"lets the user choose dates of their visit and then the rooms list is updated."
+" If you have enabled booking in your Hostel settings page, the table will "
+"also show \"Book\" button when appropriate. The button will automaically load "
+"the booking form"
+msgstr ""
+
+#: views/help.html.php:10
+msgid ""
+"displays a generic booking form with a drop-down selector for choosing room, "
+"and a date selector. If you use the [wphostel-list] shortcode you most "
+"probably do not need this one because the booking form is automatically "
+"generated."
+msgstr ""
+
+#: views/help.html.php:13
+#, c-format
+msgid ""
+"If you want to translate this plugin check out <a href=\"%s\" "
+"target=\"_blank\">this guide</a>. Our plugin textdomain is \"wphostel\" and you "
+"have to place your .po and .mo files in folder languages/"
+msgstr ""
+
+#: views/list-rooms.html.php:4
+msgid "Show availability"
+msgstr "Zobrazit dostupnost"
+
+#: views/list-rooms.html.php:21
+msgid "Please select up to 5 days interval."
+msgstr "Prosím vyberte interval až 5 dnů."
+
+#: views/list-rooms.html.php:27
+#, c-format
+msgid "Minimum stay of %d days is required"
+msgstr "Minimální délka pobytu je %d"
+
+#: views/options.php:2
+msgid "Hostel Options"
+msgstr "Hostel nastavení"
+
+#: views/options.php:9
+msgid "Currency:"
+msgstr "Měna"
+
+#: views/options.php:16
+msgid "Custom"
+msgstr "Vlastní"
+
+#: views/options.php:18
+msgid "Booking mode:"
+msgstr "Mód rezervace:"
+
+#: views/options.php:19 views/options.php:24
+msgid "No booking"
+msgstr "Bez rezervace"
+
+#: views/options.php:20 views/options.php:26
+msgid "Manual / No Payment"
+msgstr "Manuální/Bez platby"
+
+#: views/options.php:21 views/options.php:27
+msgid "Paypal"
+msgstr "PayPal"
+
+#: views/options.php:24
+msgid ""
+"- In this mode your site will only show the information for the rooms and "
+"will not let the visitors book rooms"
+msgstr ""
+"- v tomto módu bude stránka pouze zobrazovat informace o pokojích a nebude "
+"možné vytvořit rezervaci"
+
+#: views/options.php:26
+msgid ""
+"- In this mode your visitors will be able to request booking by clicking on "
+"button and filling their information in the booking form. You as admin will "
+"approve or reject the booking manually in the admin panel."
+msgstr ""
+"- v tomto módu budou moci navštěvnící vytvořit rezervaci kliknutím na "
+"tlačítko a vyplnění informaci v rezervačním formuláři. Vy jako admin "
+"potvrdíte nebo odmítnete rezervaci manuálně v administračním panelu."
+
+#: views/options.php:27
+msgid ""
+"- In this mode your visitors will be able to book and get their bookings "
+"activated instantly by paying by Paypal"
+msgstr ""
+"- v tomto módu budou moci návštěvníci vytvořit rezervaci a rezervace se "
+"aktivuje automatickz na základě platby přes PayPal"
+
+#: views/options.php:32
+msgid "Your Paypal Email:"
+msgstr "Váš Paypal Email:"
+
+#: views/options.php:33
+msgid "Automatically cleanup unconfirmed (unpaid) bookings after"
+msgstr "Automaticky vyčistit nepotvrzené (nezaplacené) objednavký po"
+
+#: views/options.php:33
+msgid "hours. (Leave blank for no automated cleanup.)"
+msgstr "hodinách. (Nechte prázdné pokud nechcete automaticky vyčistit.)"
+
+#: views/options.php:37
+msgid "Require minimum stay of:"
+msgstr "Vyžaduje minimální délku pobytu:"
+
+#: views/options.php:37
+msgid "days"
+msgstr "dnů"
+
+#: views/options.php:40
+msgid "Send me email with booking details when someone makes or requests a booking"
+msgstr "Pošlete mi email s detaily rezervace, když někdo vytvoří rezervaci"
+
+#: views/options.php:43
+msgid "Email address to receive the notice:"
+msgstr "Emailová adresa kam zaslat upozornění:"
+
+#: views/options.php:44 views/options.php:53
+msgid "Email subject:"
+msgstr "Přemět e-mailu:"
+
+#: views/options.php:45 views/options.php:54
+msgid "Email message:"
+msgstr "Text e-mailu:"
+
+#: views/options.php:46 views/options.php:55
+msgid "You can use the following variables:"
+msgstr "Můžete použít následující proměnné:"
+
+#: views/options.php:46
+msgid "(The URL to see the booking details in admin)"
+msgstr "(URL pro zobrazení detaliu rezervace v adminu)"
+
+#: views/options.php:46 views/options.php:56
+msgid "(Date/time when reservation is made)"
+msgstr "(Datum/čas kdy byla rezervace vytvořena)"
+
+#: views/options.php:49
+msgid "Send confirmation email to user when booking is made"
+msgstr "Poslat potvrzovací email uživateli, který objednávku vytvořil"
+
+#: views/options.php:59
+msgid "Save Options"
+msgstr "Uložit nastavení"
+
+#: views/options.php:64
+#, c-format
+msgid ""
+"Your feedback is most welcome! Please <a href=\"%s\" target=\"_blank\">let us "
+"know</a> what features and improvements you would like to see in the plugin."
+msgstr ""
+
+#: views/partial/rooms-table.html.php:2 views/room.php:7 views/rooms.php:13
+#: views/unavailable-dates.html.php:12
+msgid "Room type"
+msgstr "Typ pokoje"
+
+#: views/partial/rooms-table.html.php:2 views/rooms.php:14
+msgid "Bathroom"
+msgstr "Koupelna"
+
+#: views/partial/rooms-table.html.php:7
+msgid "Price per person"
+msgstr "Cena za osobu"
+
+#: views/partial/rooms-table.html.php:14
+#, c-format
+msgid "%d beds"
+msgstr "%d lůžek"
+
+#: views/partial/rooms-table.html.php:28
+msgid "Not available"
+msgstr "Není dostupný"
+
+#: views/pay-paypal.html.php:1
+msgid "Booking ID:"
+msgstr "ID rezervace:"
+
+#: views/pay-paypal.html.php:8
+#, c-format
+msgid "Booking for %s Room / %d"
+msgstr "Rezervace na %s pokoj / %d"
+
+#: views/room.php:1
+msgid "Create/Edit Hostel Room"
+msgstr "Vytvořit/upravit pokoj"
+
+#: views/room.php:5
+msgid "Room title*"
+msgstr "Název pokoje*"
+
+#: views/room.php:6
+msgid "For management purposes"
+msgstr "Pro účely managementu"
+
+#: views/room.php:11
+msgid "Number of beds"
+msgstr "Počet lůžek"
+
+#: views/room.php:12
+msgid "Bahtroom"
+msgstr "Koupelna"
+
+#: views/room.php:16
+msgid "Price:"
+msgstr "Cena:"
+
+#: views/room.php:20
+msgid "Room description (optional):"
+msgstr "Popis pokoje (volitelné):"
+
+#: views/room.php:21
+msgid "Save room details"
+msgstr "Uložit detaily pokoje"
+
+#: views/room.php:29
+msgid ""
+"Please enter room title. This is important so you can recognize the room "
+"when editing it and when viewing its bookings"
+msgstr ""
+"Prosím zadejte náze pokoje. Toto je důležité pro správní rozlišení pokoju "
+"pro editace a zobrazení rezervací pokoje"
+
+#: views/room.php:35
+msgid "Please enter number of beds in the room. Use only numbers."
+msgstr "Prosím zadejte počet lůžek v pokoji. Pouze čísla."
+
+#: views/room.php:41
+msgid "Please enter room price, numbers only"
+msgstr "Prosím vložte cenu pokoje, pouze čísla"
+
+#: views/rooms.php:4
+msgid "Click here to add room"
+msgstr "Klikněte zde pro přidání pokoje"
+
+#: views/rooms.php:7
+msgid "You have not added any rooms yet."
+msgstr "Zatím jste nepřidali, žádný pokoj."
+
+#: views/rooms.php:13 views/unavailable-dates.html.php:12
+msgid "Room title"
+msgstr "Název pokoje"
+
+#: views/rooms.php:13
+msgid "Num beds"
+msgstr "Počet lůžek"
+
+#: views/rooms.php:14
+msgid "Price"
+msgstr "Cena"
+
+#: views/rooms.php:14
+msgid "Book shortcode"
+msgstr "Shortcode rezervace"
+
+#: views/rooms.php:22
+msgid "Delete"
+msgstr "Smazat"
+
+#: views/rooms.php:26
+msgid ""
+"When you place the booking shortcode a \"Book\" button will be automatically "
+"generated. Use it on a page where you have manually described your room with "
+"pictures etc. You can pass custom button text as second argument to the "
+"shortcode - like this:"
+msgstr ""
+"Když vložíte shortcode rezervace tlačítko \"Rezervovat\" se automaticky "
+"vygeneruje. Použijte je na stránce kde se náchází popis pokoje s obrázky etc."
+" Můžete vložit vlastní text v tlačítku jako druhý argument shortcodu - jako:"
+
+#: views/sidebar.html.php:21
+msgid "Go PRO!"
+msgstr ""
+
+#: views/sidebar.html.php:23
+msgid "Get more powerful features by"
+msgstr ""
+
+#: views/sidebar.html.php:23
+msgid "upgrading to the PRO version:"
+msgstr ""
+
+#: views/sidebar.html.php:26
+msgid "Premium support"
+msgstr ""
+
+#: views/sidebar.html.php:26
+msgid "Free email support for 1 year after purchase"
+msgstr ""
+
+#: views/sidebar.html.php:27
+msgid "Advanced shortcodes"
+msgstr ""
+
+#: views/sidebar.html.php:28
+msgid "Booking availability calendars"
+msgstr ""
+
+#: views/sidebar.html.php:29
+msgid "Discounts and surcharges"
+msgstr ""
+
+#: views/sidebar.html.php:30
+msgid "Reports and charts"
+msgstr ""
+
+#: views/sidebar.html.php:31
+msgid "Customizable form code"
+msgstr ""
+
+#: views/sidebar.html.php:32
+msgid "And a lot more - just come to see!"
+msgstr ""
+
+#: views/sidebar.html.php:35
+msgid "Just go ahead and"
+msgstr ""
+
+#: views/sidebar.html.php:35
+msgid "take the tour"
+msgstr ""
+
+#: views/sidebar.html.php:35
+msgid "or check the"
+msgstr ""
+
+#: views/sidebar.html.php:35
+msgid "online demo."
+msgstr ""
+
+#: views/sidebar.html.php:37
+msgid ""
+"Upgrading to PRO comes with 60 days refund policy, one year free upgrades "
+"and one year free support."
+msgstr ""
+
+#: views/sidebar.html.php:41
+msgid "Help To Spread The Word!"
+msgstr ""
+
+#: views/sidebar.html.php:43
+msgid "If you like this plugin you can do some of the following:"
+msgstr ""
+
+#: views/sidebar.html.php:46
+msgid "Rate it 5 starts at Wordpress.org"
+msgstr ""
+
+#: views/sidebar.html.php:47
+msgid "Let others know about it by blogging or posting"
+msgstr ""
+
+#: views/sidebar.html.php:47
+msgid "our home page"
+msgstr ""
+
+#: views/sidebar.html.php:47
+msgid "on social networks."
+msgstr ""
+
+#: views/sidebar.html.php:48
+msgid "Go PRO"
+msgstr ""
+
+#: views/sidebar.html.php:48
+msgid "to empower your site with extra benefits"
+msgstr ""
+
+#: views/sidebar.html.php:53
+msgid "Need Support?"
+msgstr ""
+
+#: views/sidebar.html.php:55
+msgid "Please ask your question in the"
+msgstr ""
+
+#: views/sidebar.html.php:55
+msgid "support forum at WordPress."
+msgstr ""
+
+#: views/unavailable-dates.html.php:2
+msgid "Manage Unavailable Dates"
+msgstr "Spravovat nedostupné dny"
+
+#: views/unavailable-dates.html.php:4
+msgid ""
+"Use this page to set up dates when specific rooms can not be booked. This "
+"might be due to your scheduled maintenance, holiday, or any other date when "
+"your property will not be working, or just a specific room will not be "
+"available."
+msgstr ""
+
+#: views/unavailable-dates.html.php:6
+msgid ""
+"Note that for simplicity bookings made will not be reflected here. Making a "
+"date available does not mean there are no already made reservations for it."
+msgstr ""
+
+#: views/unavailable-dates.html.php:9
+msgid "Select date:"
+msgstr "Vyberte datum:"
+
+#: views/unavailable-dates.html.php:12
+msgid "Make unavailable"
+msgstr "Vytvořit nedostupné"
+
+#: views/unavailable-dates.html.php:20
+msgid "Save Unavailable Rooms"
+msgstr "Uložit nedostupné pokoje"
